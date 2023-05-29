@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'java-library'
+    id 'application'
+}
+
+application {
+    mainClass = 'dev.collin.spf'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+    testImplementation 'org.assertj:assertj-core:3.24.2'            // Assertion Mechanisms
+}
+
+test {
+    useJUnitPlatform()
+    jvmArgs "-XX:+PreserveFramePointer"
+    testLogging {
+        events "started", "passed", "skipped", "failed"
+        if (Boolean.getBoolean("test.verbose")) {
+            // events "passed", "skipped", "failed"
+            showException true
+            exceptionFormat "full"
+            showStandardStreams true
+        }
+
+        debug {
+            events "started", "passed", "skipped", "failed", "standard_out", "standard_error"
+            exceptionFormat "full"
+        }
+    }
+}
