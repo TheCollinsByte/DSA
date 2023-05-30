@@ -5,7 +5,7 @@ plugins {
 }
 
 application {
-    mainClass = 'dev.collin.spf'
+    mainClass = 'dev.collin.spf.SPFAlgorithm'
 }
 
 repositories {
