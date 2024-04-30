@@ -5,7 +5,7 @@ public class DSA {
         double now = System.currentTimeMillis();
 
         SumOfNumber sumOfNumber = new SumOfNumber();
-        System.out.println(sumOfNumber.findSumByFormula(999));
+        System.out.println(sumOfNumber.findSumByFormula(9999));
 
         System.out.println("Time taken - " + (System.currentTimeMillis() - now) + " milliseconds");
     }

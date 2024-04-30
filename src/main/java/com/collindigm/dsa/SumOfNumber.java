@@ -8,8 +8,8 @@ public class SumOfNumber {
 
     public int findSumByLoop(int number) {
         int sum = 0;
-        for (int i = 0; i < number; i++) {
-            sum = sum + number;
+        for (int i = 1; i <= number; i++) {
+            sum = sum + i;
         }
         return sum;
     }
