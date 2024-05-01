@@ -51,8 +51,39 @@ Asymptotic Notations helps us in determine:
 * Worst Case
 
 ### Types of Asymptotic Notations
+
 - There are three notations for performing runtime analysis of an algorithm
 
-* Omega () Notation
+* Omega (Ω) Notation
 * Big O (O) Notation
-* Theta () Notation
+* Theta (Θ) Notation
+
+
+# Omega Notation
+
+- The formal way to express the lower bound of an algorithm's running time.
+- Lower bound means for any given input this notation determines best amount of time an algorithm can take to complete.
+
+# Big O (O) Notation
+
+- The formal way to express the upper bound of an algorithm running time.
+- Upper bound means for any given input this notation determines longest amount of time an algorithm can take to complete.
+- Worst case analysis
+
+## Rules of Big O (O) Notation
+
+- It's a single processor
+- It performs sequential Execution of Statements
+- Assignment operation takes 1 unit of time. eg: int x = 5 -> 1 Unit of Time
+- Return Statement takes in 1 unit of time. eg: return x -> 1 unit of Time
+- Arithmetic operation takes 1 unit of time. eg: x + y -> 1 unit of Time
+- Logical operation takes 1 unit of time. eg: x && y -> 1 unit of Time
+- Other small/single operations takes 1 unit of time.
+- Drop lower order terms. eg: Polynomial Equation: T = n<sup>2</sup> + 3n + 1 => O(n<sup>2</sup>)
+- Drop constant multipliers. eg: Polynomial Equation: T = 3n<sup>2</sup> + 6n + 1 => O(n<sup>2</sup>)
+
+# Theta () Notation
+
+- The formal way to express both the upper and lower bound of an algorithm running time.
+- By Lower and Upper bound means for any given input this notation determines average amount of time an algorithm can take to complete.
+- Average Case analysis
