@@ -59,7 +59,7 @@ Asymptotic Notations helps us in determine:
 * Theta (Θ) Notation
 
 
-# Omega Notation
+# Omega (Ω) Notation
 
 - The formal way to express the lower bound of an algorithm's running time.
 - Lower bound means for any given input this notation determines best amount of time an algorithm can take to complete.
@@ -82,8 +82,18 @@ Asymptotic Notations helps us in determine:
 - Drop lower order terms. eg: Polynomial Equation: T = n<sup>2</sup> + 3n + 1 => O(n<sup>2</sup>)
 - Drop constant multipliers. eg: Polynomial Equation: T = 3n<sup>2</sup> + 6n + 1 => O(n<sup>2</sup>)
 
-# Theta () Notation
+# Theta (Θ) Notation
 
 - The formal way to express both the upper and lower bound of an algorithm running time.
 - By Lower and Upper bound means for any given input this notation determines average amount of time an algorithm can take to complete.
 - Average Case analysis
+
+
+# What is an Array?
+
+- It's a collection (box) of data elements of specified type.
+- All data holding partitions have contiguous memory locations.
+- Each partition has two neighbors except first and last one.
+- Size of array is fixed and cannot be modified once it is created.
+- Being adjacent each partition is indexed and can be determined by its position.
+- Index start at 0 and for (one dimensional array) ends at length - 1.
