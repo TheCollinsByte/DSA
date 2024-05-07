@@ -43,6 +43,24 @@ public class ArrayUtil {
         }
     }
 
+
+    public int findMinimum(int[] arr) {
+        // edge
+        if (arr == null || arr.length == 0) {
+            throw new IllegalArgumentException("Invalid Input");
+        }
+
+        int minimumValue = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < minimumValue) {
+                minimumValue = arr[i];
+            }
+        }
+
+        return minimumValue;
+    }
+
     public void arrayDemo() {
         int[] myArray = new int[5];     // default values will be defined based on the data type
         myArray[0] = 5;
