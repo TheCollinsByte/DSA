@@ -77,6 +77,20 @@ public class ArrayUtil {
         return secondMaximumValue;
     }
 
+    public void moveZeros(int[] arr, int lengthOfArray) {
+        int j = 0;  // Focus on zeroth elements
+        for(int i = 0; i < lengthOfArray; i++) {    // i will focus on non-zero elements
+            if (arr[i] != 0 && arr[j] == 0) {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+            if (arr[j] != 0) {
+                j++;
+            }
+        }
+    }
+
     public void arrayDemo() {
         int[] myArray = new int[5];     // default values will be defined based on the data type
         myArray[0] = 5;

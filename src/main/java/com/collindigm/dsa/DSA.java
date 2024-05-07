@@ -14,7 +14,7 @@ public class DSA {
         ArrayUtil arrayUtil = new ArrayUtil();
         arrayUtil.arrayDemo();
 
-        int[] values = new int[]{-20, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
+        int[] values = new int[]{-20, 1, 0, 2, 3, 0, 4, 5, 6, 7, 8, 9, 10, 11};
 
         int[] odd = arrayUtil.removeEven(values);
         arrayUtil.printArray(odd); // 1, 3, 5, 7, 9
@@ -27,5 +27,8 @@ public class DSA {
 
         int secondMaximumValue = arrayUtil.findSecondMaximumValue(values);
         System.out.println("Second Maximum Value: " + secondMaximumValue);
+
+        arrayUtil.moveZeros(values, values.length);
+        arrayUtil.printArray(values); //
     }
 }
