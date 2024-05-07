@@ -99,6 +99,16 @@ public class ArrayUtil {
         return temp;
     }
 
+    // Sum of N natural numbers: n(n + 1) / 2
+    public int findMissingNumber(int[] arr) {
+        int size = arr.length + 1;  // 1 is for the missing number
+        int sum = size * (size + 1) / 2;
+        for(int i = 0; i < arr.length; i++) {
+            sum = sum - arr[i];
+        }
+        return sum;
+    }
+
     public void arrayDemo() {
         int[] myArray = new int[5];     // default values will be defined based on the data type
         myArray[0] = 5;
