@@ -31,6 +31,18 @@ public class ArrayUtil {
         return result;
     }
 
+    // [2, 3, 4, 5, 6, 7]
+    // [7, 6, 5, 4, 3, 2]
+    public void reverseArray(int[] numbers, int startIndex, int lastIndex) {
+        while (startIndex < lastIndex) {
+            int temp = numbers[startIndex];
+            numbers[startIndex] = numbers[lastIndex];
+            numbers[lastIndex] = temp;
+            startIndex++;
+            lastIndex--;
+        }
+    }
+
     public void arrayDemo() {
         int[] myArray = new int[5];     // default values will be defined based on the data type
         myArray[0] = 5;
