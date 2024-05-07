@@ -109,6 +109,24 @@ public class ArrayUtil {
         return sum;
     }
 
+    public boolean isPalindrome(String word) {
+        word = word.toLowerCase();
+        char[] wordCharArray = word.toCharArray();
+
+        int start = 0;
+        int end = wordCharArray.length - 1;
+
+        while (start < end) {
+            if (wordCharArray[start] == wordCharArray[end]) {
+                start++;
+                end--;
+                continue;
+            }
+            return false;
+        }
+        return true;
+    }
+
     public void arrayDemo() {
         int[] myArray = new int[5];     // default values will be defined based on the data type
         myArray[0] = 5;

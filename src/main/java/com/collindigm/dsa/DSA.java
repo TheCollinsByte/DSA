@@ -37,5 +37,11 @@ public class DSA {
 
         int missingNumber = arrayUtil.findMissingNumber(new int[]{1, 2, 4, 5, 6, 7, 8});
         System.out.println("Missing number in array: " + missingNumber);
+
+        if (arrayUtil.isPalindrome("madam")) {
+            System.out.println("The string is palindrome !!!");
+        } else {
+            System.out.println("The string is not palindrome !!!");
+        }
     }
 }
