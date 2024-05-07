@@ -2,10 +2,33 @@ package com.collindigm.dsa.array;
 
 public class ArrayUtil {
     public void printArray(int[] arr) {
-        for (int i = 0; i <= arr.length - 1; i++) {
-            System.out.println(arr[i] + " ");
+        int n = arr.length;
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
         }
         System.out.println();
+    }
+
+    public int[] removeEven(int[] arr) {
+        int oddCount = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 != 0) {
+                oddCount++;
+            }
+        }
+
+        int[] result = new int[oddCount];
+        int oddIndex = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 != 0) {
+                result[oddIndex] = arr[i];
+                oddIndex++;
+            }
+        }
+
+        return result;
     }
 
     public void arrayDemo() {

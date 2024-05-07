@@ -13,5 +13,8 @@ public class DSA {
 
         ArrayUtil arrayUtil = new ArrayUtil();
         arrayUtil.arrayDemo();
+
+        int[] even = arrayUtil.removeEven(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
+        arrayUtil.printArray(even); // 1, 3, 5, 7, 9
     }
 }
