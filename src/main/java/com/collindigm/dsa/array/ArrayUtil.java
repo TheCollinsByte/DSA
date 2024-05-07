@@ -61,6 +61,22 @@ public class ArrayUtil {
         return minimumValue;
     }
 
+    public int findSecondMaximumValue(int[] arr) {
+        int secondMaximumValue = Integer.MIN_VALUE;
+        int maximumValue = Integer.MIN_VALUE;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > maximumValue) {
+                secondMaximumValue = maximumValue;
+                maximumValue = arr[i];
+            } else if (arr[i] > secondMaximumValue && arr[i] != maximumValue){
+                secondMaximumValue = arr[i];
+            }
+        }
+
+        return secondMaximumValue;
+    }
+
     public void arrayDemo() {
         int[] myArray = new int[5];     // default values will be defined based on the data type
         myArray[0] = 5;

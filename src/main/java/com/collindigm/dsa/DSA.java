@@ -24,5 +24,8 @@ public class DSA {
 
         int minimumValue = arrayUtil.findMinimum(values);
         System.out.println("Minimum Value: " + minimumValue);
+
+        int secondMaximumValue = arrayUtil.findSecondMaximumValue(values);
+        System.out.println("Second Maximum Value: " + secondMaximumValue);
     }
 }
