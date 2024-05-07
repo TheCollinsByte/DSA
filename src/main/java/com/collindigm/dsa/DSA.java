@@ -30,5 +30,9 @@ public class DSA {
 
         arrayUtil.moveZeros(values, values.length);
         arrayUtil.printArray(values); //
+
+        System.out.println("The Size of original array - " + values.length);
+        values = arrayUtil.resize(values, values.length * 2);
+        System.out.println("The Size of original array after resize - " + values.length);
     }
 }

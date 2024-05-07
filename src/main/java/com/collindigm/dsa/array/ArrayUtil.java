@@ -91,6 +91,14 @@ public class ArrayUtil {
         }
     }
 
+    public int[] resize(int[] arr, int capacity) {
+        int[] temp = new int[capacity];
+        for (int i = 0; i < arr.length; i++) {
+            temp[i] = arr[i];
+        }
+        return temp;
+    }
+
     public void arrayDemo() {
         int[] myArray = new int[5];     // default values will be defined based on the data type
         myArray[0] = 5;
