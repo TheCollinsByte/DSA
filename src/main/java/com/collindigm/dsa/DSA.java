@@ -55,8 +55,10 @@ public class DSA {
         // Now We will connect them together to form a chain
         sll.head.setNext(second); // 10 --> 1
         second.setNext(third);    // 10 --> 1 --> 8
-        third.setNext(fourth);    // 10 --> 1 --> 11 --> null
+        third.setNext(fourth);    // 10 --> 1 --> 8 --> 11 --> null
 
         sll.display();
+        System.out.println();
+        System.out.println("Length of a Singly Linked List: " + sll.length());
     }
 }
