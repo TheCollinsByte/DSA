@@ -39,4 +39,10 @@ public class SinglyLinkedList {
         }
         return count;
     }
+
+    public void insertFirst(int value) {
+        ListNode newNode = new ListNode(value);
+        newNode.next = head;
+        head = newNode;
+    }
 }

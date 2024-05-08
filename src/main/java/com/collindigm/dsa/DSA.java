@@ -60,5 +60,10 @@ public class DSA {
         sll.display();
         System.out.println();
         System.out.println("Length of a Singly Linked List: " + sll.length());
+
+        sll.insertFirst(10);
+        sll.insertFirst(1);
+        sll.insertFirst(0);
+        sll.display();
     }
 }
