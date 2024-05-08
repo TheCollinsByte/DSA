@@ -97,3 +97,5 @@ Asymptotic Notations helps us in determine:
 - Size of array is fixed and cannot be modified once it is created.
 - Being adjacent each partition is indexed and can be determined by its position.
 - Index start at 0 and for (one dimensional array) ends at length - 1.
+
+# What is a Singly Linked List

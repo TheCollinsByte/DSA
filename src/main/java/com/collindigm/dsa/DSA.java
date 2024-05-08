@@ -1,6 +1,7 @@
 package com.collindigm.dsa;
 
 import com.collindigm.dsa.array.ArrayUtil;
+import com.collindigm.dsa.list.SinglyLinkedList;
 
 public class DSA {
     public static void main(String[] args){
@@ -43,5 +44,19 @@ public class DSA {
         } else {
             System.out.println("The string is not palindrome !!!");
         }
+
+        // Singly Linked List
+        SinglyLinkedList sll = new SinglyLinkedList();
+        sll.head = new SinglyLinkedList.ListNode(10);
+        SinglyLinkedList.ListNode second = new SinglyLinkedList.ListNode(1);
+        SinglyLinkedList.ListNode third = new SinglyLinkedList.ListNode(8);
+        SinglyLinkedList.ListNode fourth = new SinglyLinkedList.ListNode(11);
+
+        // Now We will connect them together to form a chain
+        sll.head.setNext(second); // 10 --> 1
+        second.setNext(third);    // 10 --> 1 --> 8
+        third.setNext(fourth);    // 10 --> 1 --> 11 --> null
+
+        sll.display();
     }
 }
