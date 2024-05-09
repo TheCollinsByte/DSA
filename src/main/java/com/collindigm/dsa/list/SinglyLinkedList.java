@@ -40,14 +40,14 @@ public class SinglyLinkedList {
         return count;
     }
 
-    public void insertFirst(int value) {
-        ListNode newNode = new ListNode(value);
+    public void insertFirst(int data) {
+        ListNode newNode = new ListNode(data);
         newNode.next = head;
         head = newNode;
     }
 
-    public void insertLast(int value) {
-        ListNode newNode = new ListNode(value);
+    public void insertLast(int data) {
+        ListNode newNode = new ListNode(data);
         if (head == null) {
             head = newNode;
             return;
@@ -57,5 +57,23 @@ public class SinglyLinkedList {
             current = current.next;
         }
         current.next = newNode;
+    }
+
+    public void insert(int data, int position) {
+        ListNode node = new ListNode(data);
+        if (position == 1) {
+            node.next = head;
+            head = node;
+        } else {
+            ListNode previous = head;
+            int count = 1;  // position - 1
+            while (count < position - 1) {
+                previous = previous.next;
+                count++;
+            }
+            ListNode current = previous.next;   // Temporary Location
+            previous.next = node;
+            node.next = current;
+        }
     }
 }

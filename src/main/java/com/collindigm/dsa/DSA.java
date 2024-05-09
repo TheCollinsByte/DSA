@@ -65,6 +65,8 @@ public class DSA {
         sll.insertFirst(1);
         sll.insertFirst(0);
         sll.insertLast(100);
+        sll.insert(50, 1);
+        sll.insert(60, 5);
         sll.display();
     }
 }
