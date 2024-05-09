@@ -5,8 +5,8 @@ public class SinglyLinkedList {
     public ListNode head;
 
     public static class ListNode {
-        private int data;       // Generic Type
-        private ListNode next;
+        private int data;       // Can be a generic Type
+        private ListNode next;  // Reference to next ListNode in list
 
         public ListNode(int data) {
             this.data = data;
@@ -44,5 +44,18 @@ public class SinglyLinkedList {
         ListNode newNode = new ListNode(value);
         newNode.next = head;
         head = newNode;
+    }
+
+    public void insertEnd(int value) {
+        ListNode newNode = new ListNode(value);
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+        ListNode current = head;
+        while (null != current.next) {
+            current = current.next;
+        }
+        current.next = newNode;
     }
 }
