@@ -46,7 +46,7 @@ public class SinglyLinkedList {
         head = newNode;
     }
 
-    public void insertEnd(int value) {
+    public void insertLast(int value) {
         ListNode newNode = new ListNode(value);
         if (head == null) {
             head = newNode;
