@@ -47,6 +47,7 @@ public class DSA {
 
         // Singly Linked List
         SinglyLinkedList sll = new SinglyLinkedList();
+
         sll.head = new SinglyLinkedList.ListNode(10);
         SinglyLinkedList.ListNode second = new SinglyLinkedList.ListNode(1);
         SinglyLinkedList.ListNode third = new SinglyLinkedList.ListNode(8);
@@ -65,8 +66,14 @@ public class DSA {
         sll.insertFirst(1);
         sll.insertFirst(0);
         sll.insertLast(100);
+        /*
         sll.insert(50, 1);
         sll.insert(60, 5);
+        */
+
+        sll.display();
+        System.out.println();
+        sll.deleteFirst();
         sll.display();
     }
 }
