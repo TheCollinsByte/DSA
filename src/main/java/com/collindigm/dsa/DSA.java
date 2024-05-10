@@ -66,17 +66,16 @@ public class DSA {
         sll.insertFirst(1);
         sll.insertFirst(0);
         sll.insertLast(100);
-        /*
         sll.insert(50, 1);
         sll.insert(60, 5);
-        */
 
         sll.display();
         System.out.println();
         System.out.println(sll.deleteFirst().getData());
         sll.display();
-        System.out.println();
         System.out.println(sll.deleteLast().getData());
+        sll.display();
+        System.out.println("Delete at position 3: " + sll.delete(1).getData());
         sll.display();
     }
 }

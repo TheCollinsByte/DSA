@@ -29,6 +29,7 @@ public class SinglyLinkedList {
             current = current.next;
         }
         System.out.print("null");
+        System.out.println();
     }
 
     public int length() {
@@ -102,6 +103,24 @@ public class SinglyLinkedList {
             current = current.next;
         }
         previous.next = null;   // Break the chain
+        return current;
+    }
+
+    public ListNode delete(int position) {
+        if (position == 1) {
+            head = head.next;
+        }
+
+        ListNode previous = head;
+        int count = 1;
+
+        while (count < position - 1) {
+            previous = previous.next;
+            count++;
+        }
+
+        ListNode current = previous.next;
+        previous.next = current.next;
         return current;
     }
 }
