@@ -16,6 +16,10 @@ public class SinglyLinkedList {
         public void setNext(ListNode next) {
             this.next = next;
         }
+
+        public int getData() {
+            return data;
+        }
     }
 
     public void display() {
@@ -85,5 +89,19 @@ public class SinglyLinkedList {
         head = head.next;
         temp.next = null;
         return temp;
+    }
+
+    public ListNode deleteLast() {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode current = head;
+        ListNode previous = null;
+        while (current.next != null) {
+            previous = current;
+            current = current.next;
+        }
+        previous.next = null;   // Break the chain
+        return current;
     }
 }

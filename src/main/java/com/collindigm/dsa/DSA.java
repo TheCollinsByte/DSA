@@ -73,7 +73,10 @@ public class DSA {
 
         sll.display();
         System.out.println();
-        sll.deleteFirst();
+        System.out.println(sll.deleteFirst().getData());
+        sll.display();
+        System.out.println();
+        System.out.println(sll.deleteLast().getData());
         sll.display();
     }
 }
