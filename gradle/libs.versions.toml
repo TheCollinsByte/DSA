@@ -2,9 +2,13 @@
 junit-jupiter = "5.10.2"
 asertj = "3.25.3"
 mockito = "5.12.0"
+slfj = "2.0.13"
+logback = "1.5.6"
 
 [libraries]
 junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit-jupiter" }
 junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit-jupiter" }
 assertj = { module = "org.assertj:assertj-core", version.ref = "asertj" }
 mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+slfj = { module = "org.slf4j:slf4j-api", version.ref = "slfj" }
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
