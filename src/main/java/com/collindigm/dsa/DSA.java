@@ -77,5 +77,12 @@ public class DSA {
         sll.display();
         System.out.println("Delete at position 3: " + sll.delete(1).getData());
         sll.display();
+
+        if (sll.find(sll.head, 50)) {
+            System.out.println("Search Value Found");
+        } else {
+            System.out.println("Search Value Not Found");
+        }
+
     }
 }

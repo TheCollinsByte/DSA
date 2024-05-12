@@ -123,4 +123,18 @@ public class SinglyLinkedList {
         previous.next = current.next;
         return current;
     }
+
+    public boolean find(ListNode head, int searchKey) {
+        if (head == null) {
+            return false;
+        }
+        ListNode current = head;
+        while (current.next != null) {
+            if (current.data == searchKey) {
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }
 }
