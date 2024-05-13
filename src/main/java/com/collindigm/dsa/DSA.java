@@ -87,5 +87,8 @@ public class DSA {
         sll.display();
         sll.reverse(sll.head);
         sll.display();
+
+        SinglyLinkedList.ListNode node = sll.getNthNodeFromEnd(1);
+        System.out.println(node.getData());
     }
 }
