@@ -84,5 +84,8 @@ public class DSA {
             System.out.println("Search Value Not Found");
         }
 
+        sll.display();
+        sll.reverse(sll.head);
+        sll.display();
     }
 }
