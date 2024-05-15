@@ -5,6 +5,7 @@ import com.collindigm.dsa.list.SinglyLinkedList;
 
 public class DSA {
     public static void main(String[] args){
+        /*
         double now = System.currentTimeMillis();
 
         SumOfNumber sumOfNumber = new SumOfNumber();
@@ -44,7 +45,9 @@ public class DSA {
         } else {
             System.out.println("The string is not palindrome !!!");
         }
+        */
 
+        /*
         // Singly Linked List
         SinglyLinkedList sll = new SinglyLinkedList();
 
@@ -90,5 +93,19 @@ public class DSA {
 
         SinglyLinkedList.ListNode node = sll.getNthNodeFromEnd(1);
         System.out.println(node.getData());
+         */
+
+        SinglyLinkedList node = new SinglyLinkedList();
+        node.head = new SinglyLinkedList.ListNode(10);
+        node.insertLast(20);
+        node.insertLast(20);
+        node.insertLast(30);
+        node.insertLast(40);
+        node.insertLast(40);
+        node.insertLast(50);
+
+        node.display();
+        node.removeDuplicates();
+        node.display();
     }
 }
