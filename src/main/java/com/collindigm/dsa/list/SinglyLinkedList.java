@@ -322,4 +322,41 @@ public class SinglyLinkedList {
         fifth.next = sixth;
         sixth.next = third;
     }
+
+
+    // Both ListNode a and b should be sorted
+    public ListNode merge(ListNode a, ListNode b) {
+        ListNode dummy = new ListNode(0);
+        ListNode tail = dummy;
+
+        /*
+        ListNode head = null;
+        if (a.data <= b.data) {
+            head = a;
+            a = a.next;
+        } else {
+            head = b;
+            b = b.next;
+        }
+         */
+
+        while (a != null && b != null) {
+            if (a.data <= b.data) {
+                tail.next = a;
+                a = a.next;
+            } else {
+                tail.next = b;
+                b = b.next;
+            }
+            tail = tail.next;
+        }
+
+        if (a == null) {
+            tail.next = b;
+        } else {
+            tail.next = a;
+        }
+
+        return dummy.next;
+    }
 }

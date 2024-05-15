@@ -1,6 +1,5 @@
 package com.collindigm.dsa;
 
-import com.collindigm.dsa.array.ArrayUtil;
 import com.collindigm.dsa.list.SinglyLinkedList;
 
 public class DSA {
@@ -95,20 +94,25 @@ public class DSA {
         System.out.println(node.getData());
          */
 
-        SinglyLinkedList node = new SinglyLinkedList();
-        node.head = new SinglyLinkedList.ListNode(10);
-        node.insertLast(20);
-        node.insertLast(20);
-        node.insertLast(30);
-        node.insertLast(40);
-        node.insertLast(40);
-        node.insertLast(50);
+        SinglyLinkedList node1 = new SinglyLinkedList();
+        node1.head = new SinglyLinkedList.ListNode(1);
+        node1.insertLast(4);
+        node1.insertLast(8);
 
-        node.display();
-        node.createLoopInLinkedList();
-        System.out.println(node.containsLoop());
-        System.out.println(node.startNodeInALoop().getData());
-        node.removeLoop();
-        node.display();
+        SinglyLinkedList node2 = new SinglyLinkedList();
+        node2.head = new SinglyLinkedList.ListNode(3);
+        node2.insertLast(5);
+        node2.insertLast(8);
+        node2.insertLast(9);
+        node2.insertLast(14);
+        node2.insertLast(18);
+
+        node1.display();
+        node2.display();
+
+        SinglyLinkedList result = new SinglyLinkedList();
+        result.head = node2.merge(node1.head, node2.head);
+
+        result.display();
     }
 }
