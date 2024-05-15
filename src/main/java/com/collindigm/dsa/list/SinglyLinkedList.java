@@ -271,6 +271,23 @@ public class SinglyLinkedList {
         return null;
     }
 
+    public void removeLoop() {
+        ListNode fastPtr = head;
+        ListNode slowPtr = head;
+
+        /**
+         * Floyd's cycle detection algorithm
+         */
+        while (fastPtr != null && fastPtr.next != null) {
+            fastPtr = fastPtr.next.next;
+            slowPtr = slowPtr.next;
+            if (slowPtr == fastPtr) {
+                removeLoop(slowPtr);
+                return;
+            }
+        }
+    }
+
     private ListNode getStartingNode(ListNode slowPtr) {
         ListNode temp = head;
         while (slowPtr != temp) {
@@ -278,6 +295,15 @@ public class SinglyLinkedList {
             slowPtr = slowPtr.next;
         }
         return temp;        // starting node of the loop
+    }
+
+    private void removeLoop(ListNode slowPtr) {
+        ListNode temp = head;
+        while (slowPtr.next != temp.next) {
+            temp = temp.next;
+            slowPtr = slowPtr.next;
+        }
+        slowPtr.next = null;
     }
 
     public void createLoopInLinkedList() {
