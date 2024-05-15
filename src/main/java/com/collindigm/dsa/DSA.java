@@ -107,6 +107,6 @@ public class DSA {
         node.display();
         node.createLoopInLinkedList();
         System.out.println(node.containsLoop());
-        node.display();
+        System.out.println(node.startNodeInALoop().getData());
     }
 }
