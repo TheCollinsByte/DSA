@@ -107,5 +107,7 @@ public class DSA {
         node.display();
         node.removeDuplicates();
         node.display();
+        node.insertInSortedList(15);
+        node.display();
     }
 }
