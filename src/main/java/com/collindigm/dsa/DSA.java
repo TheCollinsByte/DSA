@@ -1,5 +1,6 @@
 package com.collindigm.dsa;
 
+import com.collindigm.dsa.list.DoublyLinkedList;
 import com.collindigm.dsa.list.SinglyLinkedList;
 
 public class DSA {
@@ -92,7 +93,6 @@ public class DSA {
 
         SinglyLinkedList.ListNode node = sll.getNthNodeFromEnd(1);
         System.out.println(node.getData());
-         */
 
         SinglyLinkedList node1 = new SinglyLinkedList();
         node1.head = new SinglyLinkedList.ListNode(1);
@@ -115,5 +115,12 @@ public class DSA {
         //result.head = node2.merge(node1.head, node2.head);
 
         result.display();
+         */
+
+        DoublyLinkedList dll = new DoublyLinkedList();
+        dll.insertFirst(1);
+        dll.insertFirst(10);
+        dll.displayForward();
+        dll.displayBackward();
     }
 }
