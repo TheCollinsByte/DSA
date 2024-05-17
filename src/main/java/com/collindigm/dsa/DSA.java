@@ -120,6 +120,7 @@ public class DSA {
         DoublyLinkedList dll = new DoublyLinkedList();
         dll.insertFirst(1);
         dll.insertFirst(10);
+        dll.insertLast(5);
         dll.displayForward();
         dll.displayBackward();
     }
