@@ -52,4 +52,16 @@ public class CircularSinglyLinkedList {
         }
         System.out.print(last.data + " ");
     }
+
+    public void insertFirst(int data) {
+        ListNode newNode = new ListNode(data);
+
+        if(last == null) {
+            last = newNode;
+        } else {
+            newNode.next = last.next;
+        }
+        last.next = newNode;
+        length++;
+    }
 }
