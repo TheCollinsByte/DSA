@@ -76,5 +76,6 @@ public class DoublyLinkedList {
             newNode.previous = tail;
         }
         tail = newNode;
+        length++;
     }
 }
