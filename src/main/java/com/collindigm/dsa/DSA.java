@@ -104,14 +104,15 @@ public class DSA {
         node2.insertLast(5);
         node2.insertLast(8);
         node2.insertLast(9);
-        node2.insertLast(14);
-        node2.insertLast(18);
+        node2.insertLast(4);
+        node2.insertLast(1);
 
         node1.display();
         node2.display();
 
         SinglyLinkedList result = new SinglyLinkedList();
-        result.head = node2.merge(node1.head, node2.head);
+        result.head = result.add(node1.head, node2.head);
+        //result.head = node2.merge(node1.head, node2.head);
 
         result.display();
     }
