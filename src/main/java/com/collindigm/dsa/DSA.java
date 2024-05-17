@@ -123,6 +123,7 @@ public class DSA {
         csll.insertFirst(40);
         csll.insertFirst(80);
         csll.insertLast(100);
+        csll.removeFirst();
         csll.display();
     }
 }

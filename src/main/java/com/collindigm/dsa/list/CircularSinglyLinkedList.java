@@ -1,5 +1,7 @@
 package com.collindigm.dsa.list;
 
+import java.util.NoSuchElementException;
+
 public class CircularSinglyLinkedList {
 
     private ListNode last;
@@ -78,5 +80,20 @@ public class CircularSinglyLinkedList {
         }
 
         length++;
+    }
+
+    public ListNode removeFirst() {
+        if (isEmpty()) {
+            throw new NoSuchElementException("Circular Singly Linked List is already empty");
+        }
+        ListNode temp = last.next;
+        if (last.next == last) {
+            last = null;
+        } else {
+            last.next = temp.next;
+        }
+        temp.next = null;
+        length--;
+        return temp;
     }
 }
