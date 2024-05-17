@@ -100,4 +100,25 @@ public class DoublyLinkedList {
 
         return temp;
     }
+
+    public ListNode deleteLast() {
+
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+
+        ListNode temp = tail;
+
+        if (tail == head) {
+            head = null;
+        } else {
+            tail.previous.next = null;
+        }
+
+        tail = tail.previous;
+        temp.previous = null;
+        length--;
+
+        return temp;
+    }
 }
