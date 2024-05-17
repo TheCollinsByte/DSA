@@ -100,13 +100,13 @@ Asymptotic Notations helps us in determine:
 
 # What is a Singly Linked List?
 
+- A singly linked list is a data structure that consists of a sequence of elements called nodes. Each node contains two parts: data and a reference (or pointer) to the next node in the sequence. The first node is called the head, and the last node's reference points to null, indicating the end of the list.
+
 # What is a Doubly Linked List?
 
-- It is called two-way Linked List.
-- Given a node, We can navigate list in both forward and backward direction, which is not possible in Singly Linked List.
-- A node in Singly Linked List can only be deleted if we have a pointer to its previous node. But in Doubly Linked List we can delete the node even if we don't have pointer to its previous node.
+- A doubly linked list is similar to a singly linked list, but with an extra pointer in each node, allowing traversal in both forward and backward directions. In addition to having a reference to the next node (usually called next), each node in a doubly linked list also has a reference to the previous node (usually called prev).
  
 # What is a Circular Singly Linked List?
 
-- It's similar to Singly Linked List, with a difference that in Circular Linked List the last node points to first node and not null
+- A circular singly linked list is a variation of a singly linked list where the last node's reference doesn't point to null but instead points back to the first node, forming a circular structure.
 - Instead of head, We keep track of last node in Circular Singly List
