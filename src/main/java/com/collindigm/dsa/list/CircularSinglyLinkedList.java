@@ -40,4 +40,16 @@ public class CircularSinglyLinkedList {
 
         last = fourth;
     }
+
+    public void display() {
+        if(last == null) {
+            return;
+        }
+        ListNode first = last.next;
+        while (first != last) {
+            System.out.print(first.data + " ");
+            first = first.next;
+        }
+        System.out.print(last.data + " ");
+    }
 }

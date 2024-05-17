@@ -120,5 +120,6 @@ public class DSA {
 
         CircularSinglyLinkedList csll = new CircularSinglyLinkedList();
         csll.createCircularLinkedList();
+        csll.display();
     }
 }
