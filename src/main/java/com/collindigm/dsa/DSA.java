@@ -1,5 +1,6 @@
 package com.collindigm.dsa;
 
+import com.collindigm.dsa.list.CircularSinglyLinkedList;
 import com.collindigm.dsa.list.DoublyLinkedList;
 import com.collindigm.dsa.list.SinglyLinkedList;
 
@@ -117,11 +118,7 @@ public class DSA {
         result.display();
          */
 
-        DoublyLinkedList dll = new DoublyLinkedList();
-        dll.insertFirst(1);
-        dll.insertFirst(10);
-        dll.deleteLast();
-        dll.displayForward();
-        dll.displayBackward();
+        CircularSinglyLinkedList csll = new CircularSinglyLinkedList();
+        csll.createCircularLinkedList();
     }
 }
