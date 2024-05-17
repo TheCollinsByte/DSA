@@ -64,4 +64,19 @@ public class CircularSinglyLinkedList {
         last.next = newNode;
         length++;
     }
+
+    public void insertLast(int data) {
+        ListNode newNode = new ListNode(data);
+
+        if (last == null) {     // isEmpty()
+            last = newNode;
+            last.next = last;
+        } else {
+            newNode.next = last.next;
+            last.next = newNode;
+            last = newNode;
+        }
+
+        length++;
+    }
 }

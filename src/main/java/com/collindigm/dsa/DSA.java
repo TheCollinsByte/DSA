@@ -122,6 +122,7 @@ public class DSA {
         csll.createCircularLinkedList();
         csll.insertFirst(40);
         csll.insertFirst(80);
+        csll.insertLast(100);
         csll.display();
     }
 }
