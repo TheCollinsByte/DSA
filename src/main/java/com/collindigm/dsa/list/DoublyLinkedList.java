@@ -1,5 +1,7 @@
 package com.collindigm.dsa.list;
 
+import java.util.NoSuchElementException;
+
 public class DoublyLinkedList {
 
     private int length;
@@ -77,5 +79,25 @@ public class DoublyLinkedList {
         }
         tail = newNode;
         length++;
+    }
+
+    public ListNode deleteFirst() {
+
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        ListNode temp = head;
+
+        if(head == tail) {
+            tail = null;
+        } else {
+            head.next.previous = null;
+        }
+
+        head = head.next;
+        temp.next = null;
+        length--;
+
+        return temp;
     }
 }
