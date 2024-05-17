@@ -98,10 +98,15 @@ Asymptotic Notations helps us in determine:
 - Being adjacent each partition is indexed and can be determined by its position.
 - Index start at 0 and for (one dimensional array) ends at length - 1.
 
-# What is a Singly Linked List
+# What is a Singly Linked List?
 
-# What is a Doubly Linked List
+# What is a Doubly Linked List?
 
 - It is called two-way Linked List.
 - Given a node, We can navigate list in both forward and backward direction, which is not possible in Singly Linked List.
 - A node in Singly Linked List can only be deleted if we have a pointer to its previous node. But in Doubly Linked List we can delete the node even if we don't have pointer to its previous node.
+ 
+# What is a Circular Singly Linked List?
+
+- It's similar to Singly Linked List, with a difference that in Circular Linked List the last node points to first node and not null
+- Instead of head, We keep track of last node in Circular Singly List
