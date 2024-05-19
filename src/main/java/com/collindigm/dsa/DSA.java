@@ -4,6 +4,7 @@ import com.collindigm.dsa.list.CircularSinglyLinkedList;
 import com.collindigm.dsa.list.DoublyLinkedList;
 import com.collindigm.dsa.list.SinglyLinkedList;
 import com.collindigm.dsa.stack.LinkedList.Stack;
+import com.collindigm.dsa.string.StringReverse;
 
 public class DSA {
     public static void main(String[] args){
@@ -125,7 +126,6 @@ public class DSA {
         csll.insertLast(100);
         csll.removeFirst();
         csll.display();
-         */
 
         Stack stack = new Stack();
         stack.push(10);
@@ -137,5 +137,10 @@ public class DSA {
         System.out.println(stack.peek());
         stack.pop();
         System.out.println(stack.peek());
+         */
+        String str = "ABCD";
+        System.out.println("Before Reverse: " + str);
+        StringReverse stringReverse = new StringReverse();
+        System.out.println("After Reverse: " + stringReverse.reverse(str));
     }
 }
