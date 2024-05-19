@@ -110,3 +110,9 @@ Asymptotic Notations helps us in determine:
 
 - A circular singly linked list is a variation of a singly linked list where the last node's reference doesn't point to null but instead points back to the first node, forming a circular structure.
 - Instead of head, We keep track of last node in Circular Singly List
+
+# Stack
+
+- It is a linear data structure used for storing the data.
+- It's an ordered list in which insertion and deletion are done at one end, called as top.
+- The last element inserted is the first one to be deleted. Hence, it is called as Last In First Out (LIFO) list.
