@@ -42,7 +42,6 @@ public class Stack {
         }
         int result = top.data;
         top = top.next;
-        top.next = null;
         length--;
         return result;
     }

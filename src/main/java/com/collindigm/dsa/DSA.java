@@ -3,6 +3,7 @@ package com.collindigm.dsa;
 import com.collindigm.dsa.list.CircularSinglyLinkedList;
 import com.collindigm.dsa.list.DoublyLinkedList;
 import com.collindigm.dsa.list.SinglyLinkedList;
+import com.collindigm.dsa.stack.Stack;
 
 public class DSA {
     public static void main(String[] args){
@@ -116,7 +117,6 @@ public class DSA {
         //result.head = node2.merge(node1.head, node2.head);
 
         result.display();
-         */
 
         CircularSinglyLinkedList csll = new CircularSinglyLinkedList();
         csll.createCircularLinkedList();
@@ -125,5 +125,17 @@ public class DSA {
         csll.insertLast(100);
         csll.removeFirst();
         csll.display();
+         */
+
+        Stack stack = new Stack();
+        stack.push(10);
+        stack.push(15);
+        stack.push(20);
+
+        System.out.println(stack.peek());
+        stack.pop();
+        System.out.println(stack.peek());
+        stack.pop();
+        System.out.println(stack.peek());
     }
 }
