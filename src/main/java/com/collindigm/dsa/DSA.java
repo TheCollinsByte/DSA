@@ -3,7 +3,7 @@ package com.collindigm.dsa;
 import com.collindigm.dsa.list.CircularSinglyLinkedList;
 import com.collindigm.dsa.list.DoublyLinkedList;
 import com.collindigm.dsa.list.SinglyLinkedList;
-import com.collindigm.dsa.stack.Stack;
+import com.collindigm.dsa.stack.LinkedList.Stack;
 
 public class DSA {
     public static void main(String[] args){
