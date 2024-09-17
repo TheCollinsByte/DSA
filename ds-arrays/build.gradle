@@ -1,0 +1,3 @@
+plugin {
+    id 'java'
+}
