@@ -1,3 +1,37 @@
+<div align="center">
+
+<h1><a href="https://github.com/TheCollinsByte/DSA">Data Structures and Algorithms (DSA)</a></h1>
+
+<a href="https://github.com/TheCollinsByte/DSA/blob/main/LICENSE">
+<img alt="License" src="https://img.shields.io/github/license/TheCollinsByte/DSA?style=flat&color=eee&label="> </a>
+
+<a href="https://github.com/TheCollinsByte/DSA/graphs/contributors">
+<img alt="People" src="https://img.shields.io/github/contributors/TheCollinsByte/DSA?style=flat&color=ffaaf2&label=People"> </a>
+
+<a href="https://github.com/TheCollinsByte/DSA/stargazers">
+<img alt="Stars" src="https://img.shields.io/github/stars/TheCollinsByte/DSA?style=flat&color=98c379&label=Stars"> </a>
+
+<a href="https://github.com/TheCollinsByte/DSA/network/members">
+<img alt="Forks" src="https://img.shields.io/github/forks/TheCollinsByte/DSA?style=flat&color=66a8e0&label=Forks"> </a>
+
+<a href="https://github.com/TheCollinsByte/DSA/watchers">
+<img alt="Watches" src="https://img.shields.io/github/watchers/TheCollinsByte/DSA?style=flat&color=f5d08b&label=Watches"> </a>
+
+<a href="https://github.com/TheCollinsByte/DSA/pulse">
+<img alt="Last Updated" src="https://img.shields.io/github/last-commit/TheCollinsByte/DSA?style=flat&color=e06c75&label="> </a>
+
+</div>
+
+## Description
+
+LeetCodeJ is an open-source project where I solve LeetCode challenges using Java. The aim is to provide efficient and well-documented solutions to a variety of coding problems.
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Solutions](#solutions)
+- [Contributing](#contributing)
+- [License](#license)
+
 # Data Structures
 
 It's a way to organize data. After organizing data it becomes easy to process it.
