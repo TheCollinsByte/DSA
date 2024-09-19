@@ -27,10 +27,36 @@
 LeetCodeJ is an open-source project where I solve LeetCode challenges using Java. The aim is to provide efficient and well-documented solutions to a variety of coding problems.
 
 - [Installation](#installation)
-- [Usage](#usage)
-- [Solutions](#solutions)
+- [Data Structures](#Data Structures)
+- [Algorithm](#Algorithm)
+- [Analysis Of Algorithm](#Analysis Of Algorithm)
 - [Contributing](#contributing)
 - [License](#license)
+
+
+## Installation
+
+Instructions on how to set up the project on a local machine:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/TheCollinsByte/DSA
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd DSA
+    ```
+3. Ensure you have JDK version 21 installed. You can download it [here](https://www.oracle.com/java/technologies/downloads/#java21).
+
+4. Compile the project:
+    ```bash
+   ./gradlew build
+    ```
+
+5. Run the project:
+    ```bash
+    ./gradlew :{MODULE_NAME}:test -Dtest.verbose=true
+    ```
 
 # Data Structures
 
@@ -80,7 +106,7 @@ A data structure is the mathematical or logical model of an organization of data
 - <b>Graph Algorithms: </b>These algorithms deal with problems related to graphs, which are structures made up of vertices (nodes) connected by edges. Graph algorithms include finding the shortest path (Dijkstra's, Bellman-Ford), detecting cycles, or finding minimum spanning trees (Kruskal's, Prim's).
 - <b>Branch and Bound: </b>This is an optimization algorithm used for solving combinatorial problems, such as the Traveling Salesman Problem or Knapsack Problem. The algorithm explores all possible solutions but "bounds" parts of the search space that cannot lead to an optimal solution to avoid unnecessary exploration.
 
-## Analysis of Algorithms:
+## Analysis Of Algorithms:
 
 Analysis of algorithm deals in finding the best algorithm which runs fast and takes in less memory.
 
@@ -156,3 +182,30 @@ There are three notations for performing runtime analysis of an algorithm
 - The formal way to express both the upper and lower bound of an algorithm running time.
 - By Lower and Upper bound means for any given input this notation determines average amount of time an algorithm can take to complete.
 - Average Case analysis
+
+
+## Contributing
+
+Contributions are Welcome! Please follow these steps:
+
+1. Fork the repository.
+2. create a new branch (`git checkout -b name-dsa-module`)
+3. Make your changes and commit them (`git commit -m "DSA: Solutions"`)
+4. Push to the branch (`git push origin name-dsa-module`).
+5. Create a new Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+<br/><br/>
+
+<div align="center">
+
+<strong>⭐ hit the star button if you found this useful ⭐</strong><br>
+
+<a href="https://github.com/TheCollinsByte/DSA">Source</a>
+| <a href="https://x.com/TheCollinsByte" target="_blank">Twitter </a>
+| <a href="http://www.linkedin.com/in/collins-boniface" target="_blank">LinkedIn </a>
+| <a href="mailto:collo@fastmail.com">Email</a>
+</div>
