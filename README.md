@@ -29,7 +29,7 @@ LeetCodeJ is an open-source project where I solve LeetCode challenges using Java
 - [Installation](#installation)
 - [Data Structures](#data-structures)
 - [Algorithm](#algorithm)
-- [Analysis Of Algorithm](#analysis-of-algorithm)
+- [Analysis Of Algorithm](#Analysis-Of-Algorithm)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -106,7 +106,7 @@ A data structure is the mathematical or logical model of an organization of data
 - <b>Graph Algorithms: </b>These algorithms deal with problems related to graphs, which are structures made up of vertices (nodes) connected by edges. Graph algorithms include finding the shortest path (Dijkstra's, Bellman-Ford), detecting cycles, or finding minimum spanning trees (Kruskal's, Prim's).
 - <b>Branch and Bound: </b>This is an optimization algorithm used for solving combinatorial problems, such as the Traveling Salesman Problem or Knapsack Problem. The algorithm explores all possible solutions but "bounds" parts of the search space that cannot lead to an optimal solution to avoid unnecessary exploration.
 
-# Analysis Of Algorithms:
+# Analysis Of Algorithms
 
 Analysis of algorithm deals in finding the best algorithm which runs fast and takes in less memory.
 
@@ -154,12 +154,12 @@ There are three notations for performing runtime analysis of an algorithm
 * Theta (Θ) Notation
 
 
-# Omega (Ω) Notation
+## Omega (Ω) Notation
 
 - The formal way to express the lower bound of an algorithm's running time.
 - Lower bound means for any given input this notation determines best amount of time an algorithm can take to complete.
 
-# Big O (O) Notation
+## Big O (O) Notation
 
 - The formal way to express the upper bound of an algorithm running time.
 - Upper bound means for any given input this notation determines longest amount of time an algorithm can take to complete.
@@ -177,7 +177,7 @@ There are three notations for performing runtime analysis of an algorithm
 - Drop lower order terms. eg: Polynomial Equation: T = n<sup>2</sup> + 3n + 1 => O(n<sup>2</sup>)
 - Drop constant multipliers. eg: Polynomial Equation: T = 3n<sup>2</sup> + 6n + 1 => O(n<sup>2</sup>)
 
-# Theta (Θ) Notation
+## Theta (Θ) Notation
 
 - The formal way to express both the upper and lower bound of an algorithm running time.
 - By Lower and Upper bound means for any given input this notation determines average amount of time an algorithm can take to complete.
