@@ -53,8 +53,8 @@ A data strucuture is the mathematical or logical model of an organization of dat
 - <b>Trees: </b>It is a data strucuture in which data is organized hierarchically and linked together. Some Examples are the Binary Search tree, Binary tree, Splay tree, AVL tree etc.
 - <b>Heaps: </b>It is specialized tree-based data strucuture, also called Binary heap in which the tree is a complete binary tree and the data is stored.
 - <b>Graphs: </b>It consists of a set of nodes and edges connecting each other.
-- <b>Tries: </b>
-- <b>Union-Find: </b>
+- <b>Tries (Prefix Tree): </b>a tries is a specialized tree-based data strucuture used to store a dynamic set of strings, where the keys are usually strings. It is often used for tasks such as autocomplete or searching for words in a dictionary. Tries enable efficient retrieval of strings based on their prefixes.
+- <b>Union-Find (Disjoint Set Union (DSU)): </b>this data strucuture keeps track of a set of elements partitioned into disjoint subsets. It supports two operations: find(determines which subset a particular element is in) and Union (merges two subsets). It is often used in network connectivity and Kruskal's algorithm for finding minimum spanning trees.
 
 
 # Algorithm
@@ -73,12 +73,12 @@ A data strucuture is the mathematical or logical model of an organization of dat
 - <b>Sorting Algorithm: </b>is arranging a group of data in a particular manner according to the requirment. Generally sorting algorithms are used to sort groups of data in an increasing or decreasing manner.
 - <b>Divide and Conquer Algorithm: </b>This algorithm breaks a problem into sub-problems, solves a single sub-problem, and merges the solutions to get the final solution. It Consists of the following three steps: Divide, Solve and Combine.
 - <b>Randomized Algorithms: </b>In the randomized algorithm, we use a random number so it gives immediate benefit. The random number helps in deciding the expected outcome.
-- <b>Pattern Searching: </b>
-- <b>Geometric Algorithms: </b>
-- <b>Mathematical Algorithms: </b>
-- <b>Bit Algorithms: </b>
-- <b>Graph Algorithms: </b>
-- <b>Branch and Bound: </b>
+- <b>Pattern Searching: </b>These algorithm are useed to find a pattern (substring) within a larger text (string). They help locate the position of a pattern in a given string. Common examples include the Knuth-Morris-Pratt (KMP) and Boyer-Moore algorithms.
+- <b>Geometric Algorithms: </b>These algorithm solve geometric problems like finding the convex hull, intersections of lines, and nearest neighbors. They deal with points, lines and polygons in 2D or 3D Space.
+- <b>Mathematical Algorithms: </b>These are algorithms that solve mathematical problems such as calculating prime numbers, performing matrix operations or solving linear equations. Examples include algorithms for number theory, combinatorics and algebraic problems like the Euclidean algorithm for finding the greatest common divisor (GCD).
+- <b>Bit Algorithms: </b>Bit manipulation algorithms perform operations at the bit level such as flipping, setting or shifting bits. They are efficient in optimizing space and speed for tasks like counting bits or performing XOR operations. Common bit algorithms include bitwise AND, OR and XOR operations.
+- <b>Graph Algorithms: </b>These algorithms deal with problems related to graphs, which are structures made up of vertices (nodes) connected by edges. Graph algorithms include finding the shortest path (Dijkstra's, Bellman-Ford), detecting cycles, or finding minimum spanning trees (Kruskal's, Prim's).
+- <b>Branch and Bound: </b>This is an optimization algorithm used for solving combinatorial problems, such as the Traveling Salesman Problem or Knapsack Problem. The algorithm explores all possible solutions but "bounds" parts of the search space that cannot lead to an optimal solution to avoid unnecessary exploration.
 
 ## Analysis of Algorithms:
 
