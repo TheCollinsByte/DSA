@@ -106,7 +106,7 @@ A data structure is the mathematical or logical model of an organization of data
 - <b>Graph Algorithms: </b>These algorithms deal with problems related to graphs, which are structures made up of vertices (nodes) connected by edges. Graph algorithms include finding the shortest path (Dijkstra's, Bellman-Ford), detecting cycles, or finding minimum spanning trees (Kruskal's, Prim's).
 - <b>Branch and Bound: </b>This is an optimization algorithm used for solving combinatorial problems, such as the Traveling Salesman Problem or Knapsack Problem. The algorithm explores all possible solutions but "bounds" parts of the search space that cannot lead to an optimal solution to avoid unnecessary exploration.
 
-## Analysis Of Algorithms:
+# Analysis Of Algorithms:
 
 Analysis of algorithm deals in finding the best algorithm which runs fast and takes in less memory.
 
