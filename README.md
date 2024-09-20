@@ -29,7 +29,7 @@ LeetCodeJ is an open-source project where I solve LeetCode challenges using Java
 - [Installation](#installation)
 - [Data Structures](#data-structures)
 - [Algorithm](#algorithm)
-- [Analysis Of Algorithm](#Analysis-Of-Algorithm)
+- [Analysis Of Algorithm](#analysis-of-algorithms)
 - [Contributing](#contributing)
 - [License](#license)
 
