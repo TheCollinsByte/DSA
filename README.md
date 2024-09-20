@@ -27,9 +27,9 @@
 LeetCodeJ is an open-source project where I solve LeetCode challenges using Java. The aim is to provide efficient and well-documented solutions to a variety of coding problems.
 
 - [Installation](#installation)
-- [Data Structures](#Data-Structures)
-- [Algorithm](#Algorithm)
-- [Analysis Of Algorithm](#Analysis-Of-Algorithm)
+- [Data Structures](#data-structures)
+- [Algorithm](#algorithm)
+- [Analysis Of Algorithm](#analysis-of-algorithm)
 - [Contributing](#contributing)
 - [License](#license)
 
