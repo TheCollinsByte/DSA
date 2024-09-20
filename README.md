@@ -34,23 +34,58 @@ LeetCodeJ is an open-source project where I solve LeetCode challenges using Java
 
 # Data Structures
 
-It's a way to organize data. After organizing data it becomes easy to process it.
+A data strucuture is the mathematical or logical model of an organization of data.
+
+## Classification of Data Structure
+
+- <b>Linear Data Structure: </b>Data strucuture in which data elements are arranged sequentially or linearly, where each element is attached to its previous and next adjacent elements. Example: Array, Stack, Queue, Linked List etc.
+- <b>Static Data Structure: </b>has a fixed memory size. It is easier to access the elements in a static data structure. Example: Array.
+- <b>Dynamic Data Structure: </b>In dynamic data strucuture, the size is not fixed. it can be randomly updated during the runtime which may be considered efficient concerning the memory (space) complexity of the code. Example: Queue, Stack etc
+- <b>Non-Linear Data Structure: </b>Is where data elements are not placed sequentially or linearly. We can't traverse all the elements in a single run only. Example: Trees and Graphs.
 
 ## Types of Data Structures
 
-- Linear: Arranged in sequensial manner: Array, Linked List, Stack and Queue
-- Non-Linear: They are not sequensial manner, they're multilevel: Tree and Graph
+- <b>Arrays: </b>An array is a collection of elements of the same type placed in contiguous memory locations.
+- <b>Linked List: </b>It is a linear data strucuture, in which the elements are not stored at contiguous memory locations and the elements are linked with each other.
+- <b>Stacks: </b>Follow LIFO (Last In First Out) principle, In this, the last element in the stack will be removed first.
+- <b>Queues: </b>Follow FIFO (First In First Out) principle, In this, the first element stored is removed first.
+- <b>Hash Tables (Hash Maps/Sets): </b>This is a type of data strucuture that store values which have keys related to each of them.
+- <b>Trees: </b>It is a data strucuture in which data is organized hierarchically and linked together. Some Examples are the Binary Search tree, Binary tree, Splay tree, AVL tree etc.
+- <b>Heaps: </b>It is specialized tree-based data strucuture, also called Binary heap in which the tree is a complete binary tree and the data is stored.
+- <b>Graphs: </b>It consists of a set of nodes and edges connecting each other.
+- <b>Tries: </b>
+- <b>Union-Find: </b>
+
 
 # Algorithm
 
-- An algorithm is a set of instructions to perform a task or to solve a given problem.
+- An algorithm is a well-defined sets of instructions designed that are used to solve problems or perform a task.
 
+## Types of Algorithms
 
-## Analysis of Algorithm
+- <b>Recursion: </b>A recursive algorithm is based on recursion. In this case, a problem is broken into several sub-parts and called the same function again and again.
+- <b>Dynamic Programming Algorithm: </b>This algorithm uses the concept of using the already found solution to avoid repetitive calculation of the same part of the problem. It divides the problem into smaller overlapping subproblem and solves them.
+- <b>Greedy Algorithms: </b>In this type of algorithm, the solution is built part by part. The solution for the next part is built based on the immediate benefit of the next part. The one solution that gives the most benefit will be chosen as the solution of the next part.
+- <b>Backtracking: </b>The backtracking algorithm builds the solution by searching among all possible solutions. Using this algorithm, we keep on building the solution following criteria. Whenever a solution fails we trace back to the failure point build on the next solution and continue this process till we find the solution or all possible solutions are looked after.
+- <b>Brute Force Algorithm: </b>It's the simplest approach to a problem. A brute force algorithm is the first approach that comes to finding when we see a problem.
+- <b>Searching Algorithm: </b>are the ones that are used for searching elements or groups of elements from a particular data Structure. They can be of different types based on their approach or the data Structure in which the element should be found. They can be of different types based on their approach or the data Structure in which the element should be found.
+- <b>Hashing Algorithm: </b>works similarly to the searching algorithm. But they contain an index with a key ID. In hashing, a key is assigned to a specific data.
+- <b>Sorting Algorithm: </b>is arranging a group of data in a particular manner according to the requirment. Generally sorting algorithms are used to sort groups of data in an increasing or decreasing manner.
+- <b>Divide and Conquer Algorithm: </b>This algorithm breaks a problem into sub-problems, solves a single sub-problem, and merges the solutions to get the final solution. It Consists of the following three steps: Divide, Solve and Combine.
+- <b>Randomized Algorithms: </b>In the randomized algorithm, we use a random number so it gives immediate benefit. The random number helps in deciding the expected outcome.
+- <b>Pattern Searching: </b>
+- <b>Geometric Algorithms: </b>
+- <b>Mathematical Algorithms: </b>
+- <b>Bit Algorithms: </b>
+- <b>Graph Algorithms: </b>
+- <b>Branch and Bound: </b>
 
-- Analysis of algorithm deals in finding the best algorithm which runs fast and takes in less memory.
-    * Time Complexity
-    * Space Complexity
+## Analysis of Algorithms:
+
+Analysis of algorithm deals in finding the best algorithm which runs fast and takes in less memory.
+
+- Time Complexity
+- Space Complexity
 
 ### Time Complexity
 
@@ -62,7 +97,7 @@ It's a way to organize data. After organizing data it becomes easy to process it
 - Amount of memory or space taken by algorithm to run.
 - The memory required to process the input by an algorithm helps in determining the space complexity.
 
-### Asymptotic Analysis of an Algorithm
+## Asymptotic Analysis of an Algorithm
 
 - Asymptotic analysis helps in evaluating performance of an algorithm in terms of input size and its increase.
 - Using asymptotic analysis we don't measure actual running time of algorithm.
@@ -72,7 +107,7 @@ It's a way to organize data. After organizing data it becomes easy to process it
 
 - Asymptotic Notations are the mathematical tools used to describe the running time of an algorithm in terms or input size.
 - Example - Performance of car in 1 liter of petrol
- 
+
 ```markdown
 Highway (Min Traffic) - 25 km/litre
 City (Max Traffic) - 15 km/litre
@@ -86,7 +121,7 @@ Asymptotic Notations helps us in determine:
 
 ### Types of Asymptotic Notations
 
-- There are three notations for performing runtime analysis of an algorithm
+There are three notations for performing runtime analysis of an algorithm
 
 * Omega (Ω) Notation
 * Big O (O) Notation
