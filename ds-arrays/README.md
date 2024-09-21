@@ -4,7 +4,7 @@ Array is a linear data structure that stores a collection of elements of the sam
 
 ## Operations on Arrays:
 
-- Traversal: Iterating through the elements of an array.
+- Traversal: Iterating through the elements of an array. (e.g: Sequential, Reverse).
 - Insertion: Adding an element to the array at a specific index.
 - Deletion: Removing an element from the array at a specific index.
 - Searching: Finding an element in the array by its value or index.
@@ -21,3 +21,4 @@ Array is a linear data structure that stores a collection of elements of the sam
 - Storing data in a sequential manner.
 - Implementing queues, stacks and other data structures.
 - Representing matrices and tables.
+- Creating dynamic data structures such as linked lists and trees
