@@ -24,7 +24,7 @@
 
 ## Description
 
-Welcome to the <b>Data Structures and Algorithms Repository!</b> This repository serves as a comprehensive collection of implementations for various data structures and algorithms using Java. Whether you are preparing for coding interviews, honing your algorithmic skills, or simply looking for efficient solutions to common problems, this repository is designed to help you.
+Welcome to the <b>Data Structures and Algorithms Repository!</b> This repository is a comprehensive collection of implementations for various data structures and algorithms in Java. Whether you're preparing for coding interviews, improving your algorithmic skills, or seeking efficient solutions to common problems, this repository is designed to assist you.
 
 - [Installation](#installation)
 - [Data Structures](#data-structures)
