@@ -15,17 +15,16 @@ dependencies {
 }
 
 test {
+    // Use JUnit Platform for unit tests.
     useJUnitPlatform()
-    jvmArgs "-XX:+PreserveFramePointer"
     testLogging {
         events "started", "passed", "skipped", "failed"
         if (Boolean.getBoolean("test.verbose")) {
             // events "passed", "skipped", "failed"
-            showException true
-            exceptionFormat "full"
-            showStandardStreams true
+            showExceptions(true)
+            exceptionFormat("full")
+            showStandardStreams(true)
         }
-
         debug {
             events "started", "passed", "skipped", "failed", "standard_out", "standard_error"
             exceptionFormat "full"
