@@ -45,6 +45,11 @@ public class ArrayTest {
 
     @Test
     public void deletion() {
+        Integer[] intArray = {1, 2, 3, 4};
+        Integer[] expectedArray = {1, 3, 4};
+        Integer[] resultArray = intArrayOps.deletion(intArray, 1);
+
+        Assertions.assertArrayEquals(expectedArray, resultArray);
     }
 
     @Test

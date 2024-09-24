@@ -23,9 +23,9 @@ public class Array<T> {
     }
 
     public void traversal(T[] array) {
-        System.err.println("Traversing the array: ");
+        System.out.println("Traversing the array: ");
         for (T element : array) {
-            System.err.println(element + " ");
+            System.out.println(element + " ");
         }
         System.out.println();
     }
@@ -46,13 +46,24 @@ public class Array<T> {
         return newArray;
     }
 
-    public int[] deletion() {
+    public T[] deletion(T[] array, int index) {
+        if (index < 0 || index >= array.length) {
+            throw new IndexOutOfBoundsException("Invalid Index");
+        }
 
-        return new int[]{23, 19, 38};
+        T[] newArray = Arrays.copyOf(array, array.length - 1);
+        for (int i = 0, j = 0; i < array.length; i++) {
+            if (i != index) {
+                newArray[j++] = array[i];
+            }
+        }
+
+        System.out.println("After Deletion: " + Arrays.toString(newArray));
+        return newArray;
     }
 
-    public int[] searching() {
+    public int searching() {
 
-        return new int[]{23, 19, 38};
+        return 0;
     }
 }
