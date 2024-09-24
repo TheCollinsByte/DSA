@@ -44,7 +44,7 @@ public class ArrayTest {
     }
 
     @Test
-    public void deletion() {
+    public void testDeletion() {
         Integer[] intArray = {1, 2, 3, 4};
         Integer[] expectedArray = {1, 3, 4};
         Integer[] resultArray = intArrayOps.deletion(intArray, 1);
@@ -53,6 +53,10 @@ public class ArrayTest {
     }
 
     @Test
-    public void searching() {
+    public void testSearching() {
+        Integer[] intArray = {1, 2, 3, 4};
+        int result = intArrayOps.searching(intArray, 3);
+
+        Assertions.assertEquals(2, result);
     }
 }

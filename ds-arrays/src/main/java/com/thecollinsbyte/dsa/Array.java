@@ -62,8 +62,16 @@ public class Array<T> {
         return newArray;
     }
 
-    public int searching() {
+    public int searching(T[] array, T key) {
 
-        return 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == key) {
+                System.out.println("Element: " + key + " found at index: " + i);
+                return i;
+            }
+        }
+
+        System.out.println("Element: " + key + " not found.");
+        return -1;
     }
 }
