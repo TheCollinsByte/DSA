@@ -1,6 +1,6 @@
 package com.thecollinsbyte.dsa;
 
-public class Arrays {
+public class Array<T> {
 
     public int[] declaration() {
 
@@ -20,26 +20,25 @@ public class Arrays {
         return new int[]{23, 32, 32};
     }
 
-    public int[] traversal() {
-
-
-        return new int[]{23, 19, 38};
+    public void traversal(T[] array) {
+        System.err.println("Traversing the array: ");
+        for (T element : array) {
+            System.err.println(element + " ");
+        }
+        System.out.println();
     }
 
     public int[] insertion() {
-
 
         return new int[]{23, 19, 38};
     }
 
     public int[] deletion() {
 
-
         return new int[]{23, 19, 38};
     }
 
     public int[] searching() {
-
 
         return new int[]{23, 19, 38};
     }
