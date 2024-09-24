@@ -1,5 +1,7 @@
 package com.thecollinsbyte.dsa;
 
+import java.util.Arrays;
+
 public class Array<T> {
 
     public int[] declaration() {
@@ -28,9 +30,20 @@ public class Array<T> {
         System.out.println();
     }
 
-    public int[] insertion() {
+    public T[] insertion(T[] array, T element, int index) {
+        if (index < 0 || index >= array.length) {
+            throw new IndexOutOfBoundsException("Invalid Index");
+        }
 
-        return new int[]{23, 19, 38};
+        T[] newArray = Arrays.copyOf(array, array.length + 1);
+
+        for (int i = newArray.length - 1; i > index; i--) {
+            newArray[i] = newArray[i - 1];
+        }
+        newArray[index] = element;
+
+        System.out.println("After Insertion: " + Arrays.toString(newArray));
+        return newArray;
     }
 
     public int[] deletion() {

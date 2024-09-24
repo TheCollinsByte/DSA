@@ -1,6 +1,5 @@
 package com.thecollinsbyte.dsa;
 
-import com.thecollinsbyte.dsa.Array;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -27,7 +26,7 @@ public class ArrayTest {
     }
 
     @Test
-    public void traversal() {
+    public void testTraversal() {
         Integer[] intArray = {1, 2, 3, 4};
         Assertions.assertDoesNotThrow(() -> intArrayOps.traversal(intArray));
 
@@ -36,7 +35,12 @@ public class ArrayTest {
     }
 
     @Test
-    public void insertion() {
+    public void testInsertion() {
+        Integer[] intArray = {1, 2, 3, 4};
+        Integer[] expectedArray = {1, 50, 2, 3, 4};
+        Integer[] resultArray = intArrayOps.insertion(intArray, 50, 1);
+
+        Assertions.assertArrayEquals(expectedArray, resultArray);
     }
 
     @Test
