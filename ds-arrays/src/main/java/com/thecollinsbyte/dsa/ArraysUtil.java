@@ -1,25 +1,21 @@
 package com.thecollinsbyte.dsa;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
-public class Array<T> {
+public class ArraysUtil<T> {
 
-    public int[] declaration() {
+    public T[] declaration(Class<T> clazz, int size) {
 
-        int intArrary[];
-        char characterArray[];
-        float floatArray[];
+        @SuppressWarnings("unchecked")
+        T[] array = (T[]) Array.newInstance(clazz, size);
 
-        return new int[]{1, 2, 3, 4};
+        return array;
     }
 
-    public int[] initialization() {
+    public <T> T[] initialization(T... elements) {
 
-        int intArrary[] = {1, 2, 3, 4, 5, 6, 7 , 8, 9, 10};
-        char characterArray[] = {'A', 'B', 'C'};
-        float floatArray[] = {3.4f, 1.2f, 3.8f};
-
-        return new int[]{23, 32, 32};
+        return elements;
     }
 
     public void traversal(T[] array) {
@@ -62,7 +58,7 @@ public class Array<T> {
         return newArray;
     }
 
-    public int searching(T[] array, T key) {
+    public <T> int searching(T[] array, T key) {
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] == key) {

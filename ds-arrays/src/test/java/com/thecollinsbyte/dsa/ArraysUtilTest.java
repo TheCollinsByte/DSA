@@ -4,25 +4,26 @@ package com.thecollinsbyte.dsa;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class ArrayTest {
+public class ArraysUtilTest {
 
-    Array<Integer> intArrayOps = new Array<>();
-    Array<String> strArrayOps = new Array<>();
+    ArraysUtil<Integer> intArrayOps = new ArraysUtil<>();
+    ArraysUtil<String> strArrayOps = new ArraysUtil<>();
 
     @Test
     public void declaration() {
+        Integer[] intArray = intArrayOps.declaration(Integer.class, 5);
+        String[] strArray = strArrayOps.declaration(String.class, 10);
 
-        int intArrary[];
-        char characterArray[];
-        float floatArray[];
+        Assertions.assertEquals(intArray.length, 5);
+        Assertions.assertEquals(strArray.length, 10);
     }
 
     @Test
     public void initialization() {
+        Integer[] intArray = intArrayOps.initialization(1, 2, 3, 4, 5);
+        Integer[] expected = {1, 2, 3, 4, 5};
 
-        int intArrary[] = {1, 2, 3, 4, 5, 6, 7 , 8, 9, 10};
-        char characterArray[] = {'A', 'B', 'C'};
-        float floatArray[] = {3.4f, 1.2f, 3.8f};
+        Assertions.assertArrayEquals(expected, intArray);
     }
 
     @Test
