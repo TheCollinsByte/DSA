@@ -118,4 +118,26 @@ public class SinglyLinkedListTest {
         intList.deletionAtEnd();
         assertEquals(List.of(10), intList.traverse());
     }
+
+    @Test
+    public void testDeleteAtPosition() {
+        intList.insertAtEnd(10);
+        intList.insertAtEnd(20);
+        intList.insertAtEnd(30);
+        intList.insertAtEnd(40);
+
+        intList.deletionAtPosition(2);
+        assertEquals(List.of(10, 20, 40), intList.traverse());
+    }
+
+    @Test
+    public void testContains() {
+        intList.insertAtEnd(10);
+        intList.insertAtEnd(20);
+        intList.insertAtEnd(30);
+        intList.insertAtEnd(40);
+
+        assertEquals(true, intList.contains(20));
+        assertEquals(false, intList.contains(50));
+    }
 }

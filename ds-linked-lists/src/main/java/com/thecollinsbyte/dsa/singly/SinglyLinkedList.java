@@ -107,6 +107,43 @@ public class SinglyLinkedList<T> {
         secondToLast.next = null;
     }
 
-    public void deletionAtPosition() {
+    public void deletionAtPosition(int position) {
+        if(head == null){
+            throw new IllegalStateException("Cannot delete from an empty list");
+        }
+        if(position < 1) {
+            throw new IllegalStateException("Position cannot be negative");
+        }
+        if(position == 0) {
+            deletionAtBeginning();
+            return;
+        }
+
+        Node<T> current = head;
+        int currentPosition = 0;
+
+        while(current.next != null) {
+            if(currentPosition == position - 1) {
+                current.next = current.next.next;
+                return;
+            }
+            current = current.next;
+            currentPosition++;
+        }
+
+        throw new IndexOutOfBoundsException("Position out of bounds");
+    }
+
+    public boolean contains(T data) {
+        if(head == null) {
+            throw new IllegalStateException("Cannot search from an empty list");
+        }
+        while(head != null) {
+            if(head.data.equals(data)) {
+                return true;
+            }
+            head = head.next;
+        }
+        return false;
     }
 }
