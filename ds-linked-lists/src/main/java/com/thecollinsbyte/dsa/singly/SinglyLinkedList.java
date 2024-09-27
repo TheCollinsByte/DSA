@@ -61,5 +61,25 @@ public class SinglyLinkedList<T> {
     }
 
     public void insertAtPosition(T data, int position) {
+        Node<T> newNode = new Node<>(data);
+        if (position == 0) {
+            insertAtBeginning(data);
+            return;
+        }
+
+        Node<T> current = head;
+        int currentPosition = 0;
+
+        while(current != null && currentPosition < position - 1) {
+            current = current.next;
+            currentPosition++;
+        }
+
+        if(current == null) {
+            throw new IndexOutOfBoundsException("Position out of bounds");
+        }
+
+        newNode.next = current.next;
+        current.next = newNode;
     }
 }
