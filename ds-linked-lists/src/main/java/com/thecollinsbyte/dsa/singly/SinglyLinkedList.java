@@ -82,4 +82,17 @@ public class SinglyLinkedList<T> {
         newNode.next = current.next;
         current.next = newNode;
     }
+
+    public void deletionAtBeginning() {
+        if (head == null) {
+            throw new IllegalStateException("Cannot delete from an empty list");
+        }
+        head = head.next;
+    }
+
+    public void deletionAtEnd() {
+    }
+
+    public void deletionAtPosition() {
+    }
 }

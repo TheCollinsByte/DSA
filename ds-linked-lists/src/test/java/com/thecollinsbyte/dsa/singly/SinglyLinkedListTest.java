@@ -88,4 +88,21 @@ public class SinglyLinkedListTest {
         assertEquals(30, result.get(2));
         assertEquals(List.of(10, 20, 30), result);
     }
+
+    @Test
+    public void testDeleteFromEmptyList() {
+        Exception exception = assertThrows(IllegalStateException.class, () -> intList.deletionAtBeginning());
+        assertEquals("Cannot delete from an empty list", exception.getMessage());
+    }
+
+    @Test
+    public void testDeleteFromBeginning() {
+        intList.insertAtEnd(10);
+        intList.insertAtEnd(20);
+        intList.insertAtEnd(30);
+        intList.deletionAtBeginning();
+
+        List<Integer> result = intList.traverse();
+        assertEquals(List.of(20, 30), result);
+    }
 }
