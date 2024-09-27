@@ -146,4 +146,14 @@ public class SinglyLinkedList<T> {
         }
         return false;
     }
+
+    public int size() {
+        int size = 0;
+        Node<T> current = head;
+        while(current != null) {
+            size++;
+            current = current.next;
+        }
+        return size;
+    }
 }
