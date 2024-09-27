@@ -105,4 +105,17 @@ public class SinglyLinkedListTest {
         List<Integer> result = intList.traverse();
         assertEquals(List.of(20, 30), result);
     }
+
+    @Test
+    public void testDeleteFromEnd() {
+        intList.insertAtEnd(10);
+        intList.insertAtEnd(20);
+        intList.insertAtEnd(30);
+
+        intList.deletionAtEnd();
+        assertEquals(List.of(10, 20), intList.traverse());
+
+        intList.deletionAtEnd();
+        assertEquals(List.of(10), intList.traverse());
+    }
 }

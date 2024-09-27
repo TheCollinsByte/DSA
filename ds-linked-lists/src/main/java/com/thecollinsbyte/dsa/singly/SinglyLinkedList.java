@@ -91,6 +91,20 @@ public class SinglyLinkedList<T> {
     }
 
     public void deletionAtEnd() {
+        if(head == null) {
+            throw new IllegalStateException("Cannot delete from an empty list");
+        }
+        if(head.next == null) {
+            head = null;
+            return;
+        }
+
+        Node<T> secondToLast = head;
+
+        while(secondToLast.next.next != null)
+            secondToLast = secondToLast.next;
+
+        secondToLast.next = null;
     }
 
     public void deletionAtPosition() {
