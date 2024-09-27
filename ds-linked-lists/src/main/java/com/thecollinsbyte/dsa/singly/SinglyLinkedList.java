@@ -156,4 +156,20 @@ public class SinglyLinkedList<T> {
         }
         return size;
     }
+
+    public T get(int index) {
+        if(index < 0 || index >= size()) {
+            throw new IndexOutOfBoundsException("Invalid Index");
+        }
+        Node<T> current = head;
+        int currentIndex = 0;
+        while(current != null) {
+            if(currentIndex == index) {
+                return current.data;
+            }
+            current = current.next;
+            currentIndex++;
+        }
+        return null;
+    }
 }

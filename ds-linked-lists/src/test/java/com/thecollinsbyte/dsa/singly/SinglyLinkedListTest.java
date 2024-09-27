@@ -150,4 +150,14 @@ public class SinglyLinkedListTest {
 
         assertEquals(4, intList.size());
     }
+
+    @Test
+    public void testGet() {
+        intList.insertAtEnd(10);
+        intList.insertAtEnd(20);
+        intList.insertAtEnd(30);
+        intList.insertAtEnd(40);
+
+        assertEquals(20, intList.get(1));
+    }
 }
