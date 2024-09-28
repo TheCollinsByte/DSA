@@ -156,6 +156,34 @@ public class DoublyLinkedList<T> {
         size--;
     }
 
+    public void deleteAtPosition(int position) {
+        if(position < 0 || position >= size){
+            throw new IndexOutOfBoundsException("Invalid Position");
+        }
+
+        if(position == 0) {
+            deletionAtBeginning();
+            return;
+        }
+
+        if(position == size - 1) {
+            deletionAtEnd();
+            return;
+        }
+
+        Node<T> current = head;
+        for(int i = 0; i < position; i++) {
+            current = current.next;
+        }
+
+        current.prev.next = current.next;
+        if(current.next != null) {
+            current.next.prev = current.prev;
+        }
+
+        size--;
+    }
+
     public void deletionAtEnd() {
         if(tail == null) {
             throw new IllegalStateException("Cannot delete from an empty list");
