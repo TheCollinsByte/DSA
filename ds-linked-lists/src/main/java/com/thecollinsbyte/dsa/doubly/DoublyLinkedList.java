@@ -143,7 +143,7 @@ public class DoublyLinkedList<T> {
         size++;
     }
 
-    public void deletionAtBeginning() {
+    public void deleteAtBeginning() {
         if(head == null) {
             throw new IllegalStateException("Cannot delete from an empty list");
         }
@@ -162,12 +162,12 @@ public class DoublyLinkedList<T> {
         }
 
         if(position == 0) {
-            deletionAtBeginning();
+            deleteAtBeginning();
             return;
         }
 
         if(position == size - 1) {
-            deletionAtEnd();
+            deleteAtEnd();
             return;
         }
 
@@ -184,7 +184,7 @@ public class DoublyLinkedList<T> {
         size--;
     }
 
-    public void deletionAtEnd() {
+    public void deleteAtEnd() {
         if(tail == null) {
             throw new IllegalStateException("Cannot delete from an empty list");
         }
