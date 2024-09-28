@@ -114,4 +114,22 @@ public class DoublyLinkedListTest {
         assertEquals(List.of(20, 30, 40, 50), result);
         assertEquals(4, result.size());
     }
+
+    @Test
+    public void testDeleteAtEnd() {
+        intDoublyLinkedList.insertAtEnd(10);
+        intDoublyLinkedList.insertAtEnd(20);
+        intDoublyLinkedList.insertAtEnd(30);
+        intDoublyLinkedList.insertAtEnd(40);
+        intDoublyLinkedList.insertAtEnd(50);
+        List<Integer> result = intDoublyLinkedList.traverse();
+
+        assertEquals(5, result.size());
+
+        intDoublyLinkedList.deletionAtEnd();
+        result = intDoublyLinkedList.traverse();
+
+        assertEquals(List.of(10, 20, 30, 40), result);
+        assertEquals(4, result.size());
+    }
 }

@@ -155,4 +155,17 @@ public class DoublyLinkedList<T> {
         }
         size--;
     }
+
+    public void deletionAtEnd() {
+        if(tail == null) {
+            throw new IllegalStateException("Cannot delete from an empty list");
+        }
+        if(head == tail) {
+            head = tail = null;
+        }else {
+            tail = tail.prev;
+            tail.next = null;
+        }
+        size--;
+    }
 }
