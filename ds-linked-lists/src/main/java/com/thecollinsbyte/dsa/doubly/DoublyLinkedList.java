@@ -31,6 +31,21 @@ public class DoublyLinkedList<T> {
         return size;
     }
 
+    public int length() {
+        if(head == null) {
+            return 0;
+        }
+
+        Node<T> current = head;
+        int length = 0;
+        while(current != null) {
+            current = current.next;
+            length++;
+        }
+
+        return length;
+    }
+
     public boolean contains(T data) {
         if(head == null) {
             throw new IllegalStateException("Cannot search from an empty list");

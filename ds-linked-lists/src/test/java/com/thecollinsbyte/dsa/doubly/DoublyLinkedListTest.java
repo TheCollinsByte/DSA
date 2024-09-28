@@ -73,4 +73,16 @@ public class DoublyLinkedListTest {
         assertEquals(30, result.get(2));
         assertEquals(List.of(10, 20, 30), result);
     }
+
+    @Test
+    public void testLengthAndSize() {
+        intDoublyLinkedList.insertAtEnd(10);
+        intDoublyLinkedList.insertAtEnd(20);
+        intDoublyLinkedList.insertAtEnd(30);
+        intDoublyLinkedList.insertAtEnd(40);
+        intDoublyLinkedList.insertAtEnd(50);
+
+        assertEquals(5, intDoublyLinkedList.size());
+        assertEquals(5, intDoublyLinkedList.length());
+    }
 }
