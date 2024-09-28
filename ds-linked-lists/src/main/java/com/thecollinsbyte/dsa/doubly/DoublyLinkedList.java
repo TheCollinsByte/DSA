@@ -69,6 +69,34 @@ public class DoublyLinkedList<T> {
         size++;
     }
 
+    public void insertAtPosition(T data, int position) {
+        if(position < 0 || position > size){
+            throw new IndexOutOfBoundsException("Position out of bounds");
+        }
+        if(position == 0) {
+            insertAtBeginning(data);
+            return;
+        }
+        if(position == size) {
+            insertAtEnd(data);
+            return;
+        }
+        Node<T> newNode = new Node<>(data);
+        Node<T> current = head;
+
+        for(int i = 0; i < position - 1; i++) {
+            current = current.next;
+        }
+
+        newNode.next = current.next;
+        newNode.prev = current;
+        if(current.next != null) {
+            current.next.prev = newNode;
+        }
+        current.next = newNode;
+        size++;
+    }
+
     public void insertAtEnd(T data) {
         Node newNode = new Node(data);
         if(head == null || tail == null) {
