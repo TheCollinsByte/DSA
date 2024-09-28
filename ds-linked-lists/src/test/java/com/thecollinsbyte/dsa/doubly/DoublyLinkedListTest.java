@@ -85,4 +85,15 @@ public class DoublyLinkedListTest {
         assertEquals(5, intDoublyLinkedList.size());
         assertEquals(5, intDoublyLinkedList.length());
     }
+
+    @Test
+    public void testGetElement() {
+        intDoublyLinkedList.insertAtEnd(10);
+        intDoublyLinkedList.insertAtEnd(20);
+        intDoublyLinkedList.insertAtEnd(30);
+        intDoublyLinkedList.insertAtEnd(40);
+        intDoublyLinkedList.insertAtEnd(50);
+
+        assertEquals(30, intDoublyLinkedList.get(2));
+    }
 }

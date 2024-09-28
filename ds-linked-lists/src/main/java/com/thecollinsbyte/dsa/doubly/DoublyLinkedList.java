@@ -46,6 +46,25 @@ public class DoublyLinkedList<T> {
         return length;
     }
 
+    public T get(int index) {
+        if(index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("Index out of bounds");
+        }
+
+        Node<T> current = head;
+        int currentPosition = 0;
+
+        while(current != null) {
+            if(currentPosition == index) {
+                return current.data;
+            }
+            current = current.next;
+            currentPosition++;
+        }
+
+        return null;
+    }
+
     public boolean contains(T data) {
         if(head == null) {
             throw new IllegalStateException("Cannot search from an empty list");
