@@ -57,6 +57,18 @@ public class DoublyLinkedList<T> {
         return elements;
     }
 
+    public void insertAtBeginning(T data) {
+        Node newNode = new Node<>(data);
+        if(head == null) {
+            head = tail = newNode;
+        } else {
+            newNode.next = head;
+            head.prev = newNode;
+            head = newNode;
+        }
+        size++;
+    }
+
     public void insertAtEnd(T data) {
         Node newNode = new Node(data);
         if(head == null || tail == null) {
@@ -67,8 +79,5 @@ public class DoublyLinkedList<T> {
             tail = newNode;
         }
         size++;
-    }
-
-    public void insertAtBeginning(T data) {
     }
 }

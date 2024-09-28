@@ -19,6 +19,19 @@ public class DoublyLinkedListTest {
     }
 
     @Test
+    public void testInsertAtBeginning() {
+        intDoublyLinkedList.insertAtBeginning(10);
+        intDoublyLinkedList.insertAtBeginning(20);
+        intDoublyLinkedList.insertAtBeginning(30);
+        List<Integer> results = intDoublyLinkedList.traverse();
+
+        assertEquals(30, results.get(0));
+        assertEquals(20, results.get(1));
+        assertEquals(10, results.get(2));
+        assertEquals(List.of(30, 20, 10), results);
+    }
+
+    @Test
     public void testInsertAtEnd() {
         intDoublyLinkedList.insertAtEnd(10);
         intDoublyLinkedList.insertAtEnd(20);
