@@ -22,8 +22,11 @@ Unlike arrays, Linked List allow for efficient insertion or removal of elements 
 
 * Singly Linked List: Each node points to the next node in the list.
 * Doubly Linked List: Each node points to both the next and previous node in the list.
+
 * Circular Linked List: The Last node points back to the first node, forming a circular loop.
-* Circular Doubly Linked List: A data structure where each node has two links: one to the next node and one to the previous node. In addition, the last node in the list back to the first node, and the first node links to the last, forming a continuous loop. This allows traversal of the list in both directions (forward and backward) without ever reaching an end.
+* Circular Singly Linked List: A data structure where each node has a link to the next node, and the last node in the list points back to the first node.
+* Circular Doubly Linked List: A data structure where each node has a link to the next and previous node, and the last node in the list points back to the first node.
+
 * Header Linked List: A type of linked list where the first node, called the <b>header node,</b> doesn't store actual data. Instead, it  serves as a starting point for the list and helps manage operations like insertion, deletion or traversal. The header node simplifies these operations by providing a consistent reference point, even if the list is empty.
 
 ## Applications of Linked List:
