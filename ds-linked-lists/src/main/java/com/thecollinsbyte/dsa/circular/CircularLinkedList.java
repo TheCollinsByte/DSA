@@ -107,6 +107,33 @@ public class CircularLinkedList<T> {
         }
         size--;
     }
+
+    public void deleteAtPosition(int position) {
+        if(size == 0) {
+            throw new IllegalStateException("List is empty");
+        }
+
+        if(position < 1 || position > size) {
+            throw new IndexOutOfBoundsException("Index out of bounds");
+        }
+
+        if(position == 1) {
+            deleteFirst();
+            return;
+        } else if (position == size) {
+            deleteLast();
+            return;
+        }
+
+        Node<T> current = tail;
+        for(int i = 1; i < position - 1; i++) {
+            current = current.next;
+        }
+
+        current.next = current.next.next;
+        size--;
+    }
+
     public void deleteLast() {
         if(size == 0) {
             throw new IllegalStateException("List is empty");
