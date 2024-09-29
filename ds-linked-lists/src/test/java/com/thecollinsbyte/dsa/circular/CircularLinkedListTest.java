@@ -27,6 +27,14 @@ public class CircularLinkedListTest {
     }
 
     @Test
+    public void testInsertionAtEmptyList() {
+        integerList.insertEmpty(10);
+
+        assertEquals(10, integerList.traverse().get(0));
+        assertEquals(1, integerList.size());
+    }
+
+    @Test
     public void testInsertionAtBeginning() {
         integerList.insertAtBeginning(10);
         integerList.insertAtBeginning(20);
