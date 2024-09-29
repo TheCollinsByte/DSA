@@ -36,4 +36,14 @@ public class CircularLinkedListTest {
 
         assertEquals(List.of(30, 20, 10), result);
     }
+
+    @Test
+    public void testInsertionAtEnd() {
+        integerList.insertAtEnd(10);
+        integerList.insertAtEnd(20);
+        integerList.insertAtEnd(30);
+
+        List<Integer> result = integerList.traverse();
+        assertEquals(List.of(10, 20, 30), result);
+    }
 }

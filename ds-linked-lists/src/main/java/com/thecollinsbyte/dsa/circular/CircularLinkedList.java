@@ -54,4 +54,18 @@ public class CircularLinkedList<T> {
         tail.next = newNode;
         size++;
     }
+
+    public void insertAtEnd(T data) {
+        Node<T> newNode = new Node<>(data);
+        if(size == 0 && tail == null) {
+            tail = newNode;
+            tail.next = newNode;
+            size++;
+            return;
+        }
+        newNode.next = tail.next;
+        tail.next = newNode;
+        tail = newNode;
+        size++;
+    }
 }
