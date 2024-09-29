@@ -55,6 +55,30 @@ public class CircularLinkedList<T> {
         size++;
     }
 
+    public void insertAtPosition(T data, int position) {
+        if(position < 1 || position > size + 1) {
+            throw new IndexOutOfBoundsException("Index out of bounds");
+        }
+
+        if(position == 1) {
+            insertAtBeginning(data);
+            return;
+        } else if (position == size + 1) {
+            insertAtEnd(data);
+            return;
+        }
+
+        Node<T> newNode = new Node<>(data);
+        Node<T> current = tail.next;
+        for(int i = 1; i < position - 1; i++) {
+            current = current.next;
+        }
+
+        newNode.next = current.next;
+        current.next = newNode;
+        size++;
+    }
+
     public void insertAtEnd(T data) {
         Node<T> newNode = new Node<>(data);
         if(size == 0 && tail == null) {

@@ -38,6 +38,19 @@ public class CircularLinkedListTest {
     }
 
     @Test
+    public void testInsertionAtPosition() {
+        integerList.insertAtEnd(10);
+        integerList.insertAtEnd(30);
+
+        integerList.insertAtPosition(20, 2);
+
+        List<Integer> result = integerList.traverse();
+
+        assertEquals(3, result.size());
+        assertEquals(List.of(10, 20, 30), result);
+    }
+
+    @Test
     public void testInsertionAtEnd() {
         integerList.insertAtEnd(10);
         integerList.insertAtEnd(20);
