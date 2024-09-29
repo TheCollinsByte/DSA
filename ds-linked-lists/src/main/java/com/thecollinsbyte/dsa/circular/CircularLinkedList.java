@@ -95,4 +95,16 @@ public class CircularLinkedList<T> {
         tail = newNode;
         size++;
     }
+
+    public void deleteFirst() {
+        if(size == 0) {
+            throw new IllegalStateException("List is empty");
+        }
+        if(size == 1) {
+            tail = null;
+        } else {
+            tail.next = tail.next.next;
+        }
+        size--;
+    }
 }

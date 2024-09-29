@@ -67,4 +67,17 @@ public class CircularLinkedListTest {
         List<Integer> result = integerList.traverse();
         assertEquals(List.of(10, 20, 30), result);
     }
+
+    @Test
+    public void testDeleteFirstNode() {
+        integerList.insertAtEnd(10);
+        integerList.insertAtEnd(20);
+        integerList.insertAtEnd(30);
+
+        integerList.deleteFirst();
+        List<Integer> result = integerList.traverse();
+
+        assertEquals(List.of(20, 30), result);
+        assertEquals(2, result.size());
+    }
 }
