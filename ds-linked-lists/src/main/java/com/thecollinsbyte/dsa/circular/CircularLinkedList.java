@@ -107,4 +107,20 @@ public class CircularLinkedList<T> {
         }
         size--;
     }
+    public void deleteLast() {
+        if(size == 0) {
+            throw new IllegalStateException("List is empty");
+        }
+        if(size == 1) {
+            tail = null;
+        } else {
+            Node<T> current = tail.next;
+            while(current.next != tail) {
+                current = current.next;
+            }
+            current.next = tail.next;
+            tail = current;
+        }
+        size--;
+    }
 }

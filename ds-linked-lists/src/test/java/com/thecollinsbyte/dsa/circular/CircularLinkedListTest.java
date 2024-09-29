@@ -80,4 +80,17 @@ public class CircularLinkedListTest {
         assertEquals(List.of(20, 30), result);
         assertEquals(2, result.size());
     }
+
+    @Test
+    public void testDeleteLastNode() {
+        integerList.insertAtEnd(10);
+        integerList.insertAtEnd(20);
+        integerList.insertAtEnd(30);
+
+        integerList.deleteLast();
+        List<Integer> result = integerList.traverse();
+
+        assertEquals(List.of(10, 20), result);
+        assertEquals(2, result.size());
+    }
 }
