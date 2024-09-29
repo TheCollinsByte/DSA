@@ -125,7 +125,7 @@ public class CircularLinkedList<T> {
             return;
         }
 
-        Node<T> current = tail;
+        Node<T> current = tail.next;
         for(int i = 1; i < position - 1; i++) {
             current = current.next;
         }

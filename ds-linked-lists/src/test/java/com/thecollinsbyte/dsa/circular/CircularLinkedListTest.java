@@ -103,7 +103,7 @@ public class CircularLinkedListTest {
         integerList.deleteAtPosition(2);
         List<Integer> result = integerList.traverse();
 
-        assertEquals(List.of(10, 20), result);
+        assertArrayEquals(new Integer[]{10, 30}, result.toArray());
         assertEquals(2, result.size());
     }
 
