@@ -150,4 +150,20 @@ public class CircularLinkedList<T> {
         }
         size--;
     }
+
+    public boolean contains(T data) {
+        if(size == 0) {
+            throw new IllegalStateException("List is empty");
+        }
+
+        Node<T> current = tail.next;
+        do {
+            if(current.data.equals(data)) {
+                return true;
+            }
+            current = current.next;
+        } while(current != tail.next);
+
+        return false;
+    }
 }

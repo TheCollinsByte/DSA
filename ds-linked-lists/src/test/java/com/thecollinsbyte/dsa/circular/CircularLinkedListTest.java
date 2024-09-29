@@ -106,4 +106,14 @@ public class CircularLinkedListTest {
         assertEquals(List.of(10, 20), result);
         assertEquals(2, result.size());
     }
+
+    @Test
+    public void testDataContains() {
+        integerList.insertAtEnd(10);
+        integerList.insertAtEnd(20);
+        integerList.insertAtEnd(30);
+
+        assertEquals(true, integerList.contains(10));
+        assertEquals(false, integerList.contains(50));
+    }
 }
