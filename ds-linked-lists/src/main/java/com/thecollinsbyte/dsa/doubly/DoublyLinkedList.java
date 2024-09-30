@@ -5,8 +5,8 @@ import java.util.ArrayList;
 
 class Node<T> {
     T data;
-    Node prev;
-    Node next;
+    Node<T> prev;
+    Node<T> next;
 
     public Node(T data) {
         this.data = data;
@@ -17,8 +17,8 @@ class Node<T> {
 
 public class DoublyLinkedList<T> {
 
-    Node head;
-    Node tail;
+    Node<T> head;
+    Node<T> tail;
     int size;
 
     public DoublyLinkedList() {
@@ -92,7 +92,7 @@ public class DoublyLinkedList<T> {
     }
 
     public void insertAtBeginning(T data) {
-        Node newNode = new Node<>(data);
+        Node<T> newNode = new Node<>(data);
         if(head == null) {
             head = tail = newNode;
         } else {
@@ -132,7 +132,7 @@ public class DoublyLinkedList<T> {
     }
 
     public void insertAtEnd(T data) {
-        Node newNode = new Node(data);
+        Node<T> newNode = new Node<T>(data);
         if(head == null || tail == null) {
             head = tail = newNode;
         } else {

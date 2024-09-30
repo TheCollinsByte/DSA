@@ -1,7 +1,6 @@
 package com.thecollinsbyte.dsa.singly;
 
 import java.util.List;
-import com.thecollinsbyte.dsa.singly.SinglyLinkedList;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;

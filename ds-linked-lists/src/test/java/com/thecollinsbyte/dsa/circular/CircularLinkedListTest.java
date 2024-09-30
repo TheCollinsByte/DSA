@@ -3,7 +3,6 @@ package com.thecollinsbyte.dsa.circular;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
-import com.thecollinsbyte.dsa.circular.CircularLinkedList;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CircularLinkedListTest {

@@ -25,7 +25,7 @@ public class SinglyLinkedList<T> {
     public List<T> traverse() {
         if (head == null) {
             System.out.println("List is empty");
-            return new ArrayList();
+            return new ArrayList<>();
         }
         List<T> elements = new ArrayList<>();
         Node<T> current = head;
