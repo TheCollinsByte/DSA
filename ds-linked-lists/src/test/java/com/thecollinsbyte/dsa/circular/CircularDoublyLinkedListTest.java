@@ -33,6 +33,11 @@ public class CircularDoublyLinkedListTest {
     }
 
     @Test
-    public void testLength() {
+    public void testInsertionAtBeginning() {
+        integerList.insertAtBeginning(30);
+        integerList.insertAtBeginning(20);
+        integerList.insertAtBeginning(10);
+
+        assertEquals(3, integerList.size());
     }
 }

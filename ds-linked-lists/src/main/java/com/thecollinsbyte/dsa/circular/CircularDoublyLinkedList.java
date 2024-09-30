@@ -56,4 +56,18 @@ public class CircularDoublyLinkedList<T> {
             throw new IllegalStateException("List is not empty");
         }
     }
+
+    public void insertAtBeginning(T data) {
+        Node newNode = new Node(data);
+        if(size == 0) {
+            insertAtEmpty(data);
+        } else {
+            newNode.next = head;
+            newNode.prev = tail;
+            head.prev = newNode;
+            tail.next = newNode;
+            head = newNode;
+            size++;
+        }
+    }
 }
