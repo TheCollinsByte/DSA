@@ -13,7 +13,7 @@ public class ArraysUtil<T> {
         return array;
     }
 
-    public <T> T[] initialization(T... elements) {
+    public T[] initialization(T... elements) {
 
         return elements;
     }
@@ -58,7 +58,7 @@ public class ArraysUtil<T> {
         return newArray;
     }
 
-    public <T> int searching(T[] array, T key) {
+    public int searching(T[] array, T key) {
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] == key) {
