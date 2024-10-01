@@ -120,4 +120,14 @@ public class CircularDoublyLinkedListTest {
         assertEquals(List.of(10, 20), result);
         assertEquals(2, result.size());
     }
+
+    @Test
+    public void testContains() {
+        integerList.insertAtEnd(10);
+        integerList.insertAtEnd(20);
+        integerList.insertAtEnd(30);
+
+        assertEquals(true, integerList.contains(20));
+        assertEquals(false, integerList.contains(100));
+    }
 }

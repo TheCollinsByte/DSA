@@ -172,4 +172,20 @@ public class CircularDoublyLinkedList<T> {
         head.prev = tail;
         size--;
     }
+
+    public boolean contains(T data) {
+        if(size == 0) {
+            throw new IllegalStateException("List is empty");
+        }
+
+        Node current = head;
+        do {
+            if(current.data.equals(data)) {
+                return true;
+            }
+            current = current.next;
+        } while(current != tail.next);
+
+        return false;
+    }
 }
