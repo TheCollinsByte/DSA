@@ -127,4 +127,14 @@ public class CircularDoublyLinkedList<T> {
 
         }
     }
+
+    public void deleteFirst() {
+        if(size == 0) {
+            throw new IllegalStateException("List is empty");
+        }
+        head = head.next;
+        tail.next = head;
+        head.prev = tail;
+        size--;
+    }
 }
