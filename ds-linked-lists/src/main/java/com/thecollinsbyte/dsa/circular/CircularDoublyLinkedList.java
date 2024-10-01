@@ -160,5 +160,16 @@ public class CircularDoublyLinkedList<T> {
     }
 
     public void deleteEnd() {
+        if(size == 0) {
+            throw new IllegalStateException("List is empty");
+        }
+        if(size == 1) {
+            head = tail = null;
+            return;
+        }
+        tail = tail.prev;
+        tail.next = head;
+        head.prev = tail;
+        size--;
     }
 }
