@@ -88,4 +88,19 @@ public class CircularDoublyLinkedList<T> {
             size++;
         }
     }
+
+    public void insertAtEnd(T data) {
+        Node newNode = new Node(data);
+        if(size == 0) {
+            insertAtEmpty(data);
+        } else {
+            newNode.next = head;
+            newNode.prev = tail;
+            head.prev = newNode;
+            tail.next = newNode;
+            tail = newNode;
+            size++;
+
+        }
+    }
 }

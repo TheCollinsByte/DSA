@@ -61,4 +61,15 @@ public class CircularDoublyLinkedListTest {
         Exception exception = assertThrows(IllegalStateException.class, () -> integerList.traverse());
         assertEquals("List is empty", exception.getMessage());
     }
+
+    @Test
+    public void testInsertionAtEnd() {
+        integerList.insertAtEnd(10);
+        integerList.insertAtEnd(20);
+        integerList.insertAtEnd(30);
+        List<Integer> result = integerList.traverse();
+
+        assertEquals(List.of(10, 20, 30), result);
+        assertEquals(3, result.size());
+    }
 }
