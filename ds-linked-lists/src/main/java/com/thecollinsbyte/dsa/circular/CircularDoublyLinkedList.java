@@ -89,6 +89,30 @@ public class CircularDoublyLinkedList<T> {
         }
     }
 
+    public void insertAtPosition(T data, int position) {
+        if(position < 1 || position > size + 1) {
+            throw new IndexOutOfBoundsException("Invalid position");
+        }
+        if(position == 1) {
+            insertAtBeginning(data);
+            return;
+        }
+        if(position == size + 1) {
+            insertAtEnd(data);
+            return;
+        }
+        Node current = head;
+        for(int i = 1; i < position - 1; i++) {
+            current = current.next;
+        }
+        Node newNode = new Node(data);
+        newNode.next = current.next;
+        newNode.prev = current;
+        current.next.prev = newNode;
+        current.next = newNode;
+        size++;
+    }
+
     public void insertAtEnd(T data) {
         Node newNode = new Node(data);
         if(size == 0) {
