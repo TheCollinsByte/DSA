@@ -3,6 +3,8 @@ package com.thecollinsbyte.dsa.circular;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import java.util.List;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -37,7 +39,26 @@ public class CircularDoublyLinkedListTest {
         integerList.insertAtBeginning(30);
         integerList.insertAtBeginning(20);
         integerList.insertAtBeginning(10);
+        List<Integer> result = integerList.traverse();
 
         assertEquals(3, integerList.size());
+        assertEquals(List.of(10, 20, 30), result);
+    }
+
+    @Test
+    public void testTraversal() {
+        integerList.insertAtBeginning(30);
+        integerList.insertAtBeginning(20);
+        integerList.insertAtBeginning(10);
+        List<Integer> result = integerList.traverse();
+
+        assertEquals(List.of(10, 20, 30), result);
+        assertEquals(3, result.size());
+    }
+
+    @Test
+    public void testTraversalOnEmptyList() {
+        Exception exception = assertThrows(IllegalStateException.class, () -> integerList.traverse());
+        assertEquals("List is empty", exception.getMessage());
     }
 }

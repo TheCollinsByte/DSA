@@ -1,5 +1,7 @@
 package com.thecollinsbyte.dsa.circular;
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class CircularDoublyLinkedList<T> {
 
@@ -43,6 +45,22 @@ public class CircularDoublyLinkedList<T> {
         } while(current != tail.next);
 
         return length;
+    }
+
+    public List<T> traverse() {
+        if(head == null || tail == null || size == 0) {
+            throw new IllegalStateException("List is empty");
+        }
+
+        List<T> results = new ArrayList<>();
+        Node current = head;
+        do {
+
+            results.add(current.data);
+            current = current.next;
+        } while(current != tail.next);
+
+        return results;
     }
 
     public void insertAtEmpty(T data) {
