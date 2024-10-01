@@ -13,13 +13,13 @@ class Node<T> {
     }
 }
 
-public class CircularLinkedList<T> {
+public class CircularSinglyLinkedList<T> {
 
     private Node<T> tail;
     private int size;
 
 
-    public CircularLinkedList() {
+    public CircularSinglyLinkedList() {
         this.tail = null;
         size = 0;
     }

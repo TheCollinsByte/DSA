@@ -5,15 +5,15 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CircularLinkedListTest {
+public class CircularSinglyLinkedListTest {
 
-    CircularLinkedList<Integer> integerList;
-    CircularLinkedList<String> stringList;
+    CircularSinglyLinkedList<Integer> integerList;
+    CircularSinglyLinkedList<String> stringList;
 
     @BeforeEach
     public void setUp() {
-        integerList = new CircularLinkedList<>();
-        stringList = new CircularLinkedList<>();
+        integerList = new CircularSinglyLinkedList<>();
+        stringList = new CircularSinglyLinkedList<>();
     }
 
     @Test
