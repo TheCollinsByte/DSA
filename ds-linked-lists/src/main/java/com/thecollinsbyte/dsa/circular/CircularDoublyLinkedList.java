@@ -137,4 +137,28 @@ public class CircularDoublyLinkedList<T> {
         head.prev = tail;
         size--;
     }
+
+    public void deleteAtPosition(int position) {
+        if(position < 1 || position > size + 1) {
+            throw new IndexOutOfBoundsException("Invalid position");
+        }
+        if(position == 1) {
+            deleteFirst();
+            return;
+        }
+        if(position == size + 1) {
+            deleteEnd();
+            return;
+        }
+        Node current = head;
+        for (int i = 1; i < position - 1; i++) {
+            current = current.next;
+        }
+        current.next = current.next.next;
+        current.next.prev = current;
+        size--;
+    }
+
+    public void deleteEnd() {
+    }
 }

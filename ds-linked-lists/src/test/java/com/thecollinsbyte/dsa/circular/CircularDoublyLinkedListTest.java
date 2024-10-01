@@ -96,4 +96,16 @@ public class CircularDoublyLinkedListTest {
         assertEquals(List.of(20, 30), result);
         assertEquals(2, result.size());
     }
+
+    @Test
+    public void testDeleteAtPosition() {
+        integerList.insertAtEnd(10);
+        integerList.insertAtEnd(20);
+        integerList.insertAtEnd(30);
+        integerList.deleteAtPosition(2);
+        List<Integer> result = integerList.traverse();
+
+        assertEquals(List.of(10, 30), result);
+        assertEquals(2, result.size());
+    }
 }
