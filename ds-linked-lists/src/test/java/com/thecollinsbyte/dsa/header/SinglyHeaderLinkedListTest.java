@@ -41,4 +41,17 @@ public class SinglyHeaderLinkedListTest {
         assertEquals(5, integerList.size());
         assertEquals(List.of(10, 20, 30, 40, 50), results);
     }
+
+    @Test
+    public void testInsertAtPosition() {
+        integerList.insertAtEnd(10);
+        integerList.insertAtEnd(20);
+        integerList.insertAtEnd(40);
+        integerList.insertAtEnd(50);
+        integerList.insertAtPosition(30, 3);
+
+        List<Integer> results = integerList.traverseForward();
+        assertEquals(5, integerList.size());
+        assertEquals(List.of(10, 20, 30, 40, 50), results);
+    }
 }

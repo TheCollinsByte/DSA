@@ -33,6 +33,39 @@ public class SinglyHeaderLinkedList<T> {
         size++;
     }
 
+    public void insertAtPosition(T data, int position) {
+        if(position < 1 || position >= size + 1) {
+            throw new IllegalStateException("Position out of bounds");
+        }
+
+        if(position == 1) {
+            insertAtBeginning(data);
+            return;
+        }
+
+        if(position == size + 1) {
+            insertAtEnd(data);
+            return;
+        }
+
+        Node newNode = new Node(data);
+        Node current = header;
+        int currentPosition = 0;
+
+        while(current != null && currentPosition < position - 1) {
+            current = current.next;
+            currentPosition++;
+        }
+
+        if(current == null) {
+            throw new IllegalStateException("Position out of bounds");
+        }
+
+        newNode.next = current.next;
+        current.next = newNode;
+        size++;
+    }
+
     public void insertAtEnd(T data) {
         Node newNode = new Node(data);
         Node current = header;
