@@ -66,6 +66,14 @@ public class SinglyHeaderLinkedList<T> {
         size++;
     }
 
+    public void deleteFirst() {
+        if(size == 0 || header.next == null) {
+            throw new IllegalStateException("List is empty");
+        }
+        header.next = header.next.next;
+        size--;
+    }
+
     public void insertAtEnd(T data) {
         Node newNode = new Node(data);
         Node current = header;
