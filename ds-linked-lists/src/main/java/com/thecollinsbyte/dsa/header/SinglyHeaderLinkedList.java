@@ -34,7 +34,7 @@ public class SinglyHeaderLinkedList<T> {
     }
 
     public void insertAtPosition(T data, int position) {
-        if(position < 1 || position >= size + 1) {
+        if(position < 1 || position > size + 1) {
             throw new IllegalStateException("Position out of bounds");
         }
 
@@ -71,6 +71,35 @@ public class SinglyHeaderLinkedList<T> {
             throw new IllegalStateException("List is empty");
         }
         header.next = header.next.next;
+        size--;
+    }
+
+    public void deleteAtPosition(int position) {
+        if(position < 1 || position > size + 1) {
+            System.out.println("Position out of bounds");
+            throw new IllegalStateException("Position out of bounds");
+        }
+
+        if(position == 1) {
+            deleteFirst();
+            return;
+        }
+
+        if(position == size + 1) {
+            deleteLast();
+            return;
+        }
+
+        Node current = header;
+        int currentPosition = 0;
+
+        while(currentPosition < position - 1) {
+            current = current.next;
+            currentPosition++;
+        }
+
+        current.next = current.next.next;
+
         size--;
     }
 
