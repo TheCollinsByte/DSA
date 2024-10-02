@@ -108,4 +108,16 @@ public class SinglyHeaderLinkedListTest {
         assertEquals(4, integerList.size());
         assertEquals(List.of(10, 20, 30, 40), results);
     }
+
+    @Test
+    public void testSearch() {
+        integerList.insertAtEnd(10);
+        integerList.insertAtEnd(20);
+        integerList.insertAtEnd(30);
+        integerList.insertAtEnd(40);
+        integerList.insertAtEnd(50);
+
+        assertEquals(true, integerList.contains(30));
+        assertEquals(false, integerList.contains(100));
+    }
 }

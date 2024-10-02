@@ -126,6 +126,22 @@ public class SinglyHeaderLinkedList<T> {
         size++;
     }
 
+    public boolean contains(T data) {
+        if(size == 0 || header.next == null) {
+            throw new IllegalStateException("List is empty");
+        }
+
+        Node current = header.next;
+
+        while(current != null) {
+            if(current.data.equals(data)) {
+                return true;
+            }
+            current = current.next;
+        }
+
+        return false;
+    }
 
     public List<T> traverseForward() {
         if(size == 0 || header.next == null) {
