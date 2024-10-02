@@ -33,6 +33,17 @@ public class SinglyHeaderLinkedList<T> {
         size++;
     }
 
+    public void insertAtEnd(T data) {
+        Node newNode = new Node(data);
+        Node current = header;
+        while(current.next != null) {
+            current = current.next;
+        }
+        newNode.next = current.next;
+        current.next = newNode;
+        size++;
+    }
+
     public List<T> traverseForward() {
         List<T> results = new ArrayList<>();
 
