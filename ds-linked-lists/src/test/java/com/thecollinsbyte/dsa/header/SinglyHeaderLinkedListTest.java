@@ -2,6 +2,7 @@ package com.thecollinsbyte.dsa.header;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -22,7 +23,10 @@ public class SinglyHeaderLinkedListTest {
         integerList.insertAtBeginning(40);
         integerList.insertAtBeginning(50);
 
+        List<Integer> results = integerList.traverseForward();
+
         assertEquals(5, integerList.size());
+        assertEquals(List.of(50, 40, 30, 20, 10), results);
     }
 
 }
