@@ -13,9 +13,21 @@ public class SinglyHeaderLinkedList<T> {
     }
 
     private Node header;
+    private int size;
 
     public SinglyHeaderLinkedList() {
         this.header = new Node(null);
+    }
+
+    public int size() {
+        return size;
+    }
+
+    public void insertAtBeginning(T data) {
+        Node newNode = new Node(data);
+        newNode.next = header.next;
+        header.next = newNode;
+        size++;
     }
 
 }
