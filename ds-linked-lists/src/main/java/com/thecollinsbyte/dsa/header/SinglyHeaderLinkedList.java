@@ -77,17 +77,44 @@ public class SinglyHeaderLinkedList<T> {
         size++;
     }
 
-    public List<T> traverseForward() {
-        List<T> results = new ArrayList<>();
 
-        if(size == 0 || header == null) {
+    public List<T> traverseForward() {
+        if(size == 0 || header.next == null) {
             throw new IllegalStateException("List is empty");
         }
+
+        List<T> results = new ArrayList<>();
 
         Node current = header.next;
         while(current != null) {
             results.add(current.data);
             current = current.next;
+        }
+
+        return results;
+    }
+
+    public List<T> traverseBackward() {
+        if(size == 0 || header.next == null) {
+            throw new IllegalStateException("List is empty");
+        }
+
+        List<T> results = new ArrayList<>();
+        int count = 0;
+        Node current = header.next;
+
+        while(current != null) {
+            count++;
+            current = current.next;
+        }
+
+        current = header.next;
+        for (int i = 0; i < count; i++) {
+            current = header.next;
+            for (int j = 0; j < count - i - 1; j++) {
+                current = current.next;
+            }
+            results.add(current.data);
         }
 
         return results;

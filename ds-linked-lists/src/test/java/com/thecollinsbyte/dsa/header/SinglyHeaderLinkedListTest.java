@@ -54,4 +54,16 @@ public class SinglyHeaderLinkedListTest {
         assertEquals(5, integerList.size());
         assertEquals(List.of(10, 20, 30, 40, 50), results);
     }
+
+    @Test
+    public void testTraversalBothDirections() {
+        integerList.insertAtEnd(10);
+        integerList.insertAtEnd(20);
+        integerList.insertAtEnd(30);
+        integerList.insertAtEnd(40);
+        integerList.insertAtEnd(50);
+
+        List<Integer> results = integerList.traverseBackward();
+        assertEquals(List.of(50, 40, 30, 20, 10), results);
+    }
 }
