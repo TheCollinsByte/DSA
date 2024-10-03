@@ -99,6 +99,24 @@ public class SinglyCircularHeaderLinkedList<T> {
         size--;
     }
 
+    public void deleteLast() {
+        if(size == 0 || header.next == header) {
+            throw new IllegalStateException("List is empty");
+        }
+
+        Node<T> current = header;
+        Node<T> prev = header;
+
+        while(current.next != header) {
+            prev = current;
+            current = current.next;
+        }
+
+        prev.next = header;
+
+        size--;
+    }
+
     public boolean contains(T data) {
         Node<T> current = header.next;
 
