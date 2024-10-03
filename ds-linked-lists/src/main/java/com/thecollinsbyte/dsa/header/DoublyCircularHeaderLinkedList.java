@@ -89,6 +89,15 @@ public class DoublyCircularHeaderLinkedList<T> {
         size--;
     }
 
+    public void deleteLast() {
+        if(size == 0 || header.next == header) {
+            throw new IllegalStateException("List is empty");
+        }
+        header.prev = header.prev.prev;
+        header.prev.next = header;
+        size--;
+    }
+
     public List<T> traverseForward() {
         if(size == 0) {
             throw new IllegalStateException("List is empty");
