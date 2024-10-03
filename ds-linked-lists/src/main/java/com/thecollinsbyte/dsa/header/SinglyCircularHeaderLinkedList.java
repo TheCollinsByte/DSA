@@ -38,4 +38,24 @@ public class SinglyCircularHeaderLinkedList<T> {
         header.next = newNode;
         size++;
     }
+
+    public void insertAtEnd(T data) {
+        Node<T> newNode = new Node<>(data);
+        Node<T> current = header;
+        if(current.next == header) {
+            header.next = newNode;
+            newNode.next = header;
+            size++;
+            return;
+        }
+
+        while(current.next != header) {
+            current = current.next;
+        }
+
+        current.next = newNode;
+        newNode.next = header;
+
+        size++;
+    }
 }

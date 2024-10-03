@@ -24,4 +24,15 @@ public class SinglyCircularHeaderLinkedListTest {
 
         assertEquals(5, integerList.size());
     }
+
+    @Test
+    public void testInsertAtEnd() {
+        integerList.insertAtEnd(10);
+        integerList.insertAtEnd(20);
+        integerList.insertAtEnd(30);
+        integerList.insertAtEnd(40);
+        integerList.insertAtEnd(50);
+
+        assertEquals(5, integerList.size());
+    }
 }
