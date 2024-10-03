@@ -54,5 +54,20 @@ public class DoublyCircularHeaderLinkedList<T> {
 
         return result;
     }
-}
 
+    public List<T> traverseBackward() {
+        if(size == 0) {
+            throw new IllegalStateException("List is empty");
+        }
+
+        List<T> result = new ArrayList<>();
+        Node<T> current = header.prev;
+
+        while(current != header) {
+            result.add(current.data);
+            current = current.prev;
+        }
+
+        return result;
+    }
+}
