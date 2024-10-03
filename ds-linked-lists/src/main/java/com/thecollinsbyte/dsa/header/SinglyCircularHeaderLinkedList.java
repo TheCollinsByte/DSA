@@ -1,5 +1,7 @@
 package com.thecollinsbyte.dsa.header;
 
+import java.util.List;
+import java.util.ArrayList;
 
 public class SinglyCircularHeaderLinkedList<T> {
 
@@ -57,5 +59,20 @@ public class SinglyCircularHeaderLinkedList<T> {
         newNode.next = header;
 
         size++;
+    }
+
+    public List<T> traverseForward() {
+        if (size == 0 || header.next == header) {
+            throw new IllegalStateException("List is empty");
+        }
+        List<T> result = new ArrayList<>();
+        Node<T> current = header.next;
+
+        while(current != header) {
+            result.add(current.data);
+            current = current.next;
+        }
+
+        return result;
     }
 }
