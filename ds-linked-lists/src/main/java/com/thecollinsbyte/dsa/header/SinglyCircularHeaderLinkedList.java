@@ -91,6 +91,19 @@ public class SinglyCircularHeaderLinkedList<T> {
         size++;
     }
 
+    public boolean contains(T data) {
+        Node<T> current = header.next;
+
+        do {
+            if (current.data.equals(data)) {
+                return true;
+            }
+            current = current.next;
+        } while(current != header);
+
+        return false;
+    }
+
     public List<T> traverseForward() {
         if (size == 0 || header.next == header) {
             throw new IllegalStateException("List is empty");
