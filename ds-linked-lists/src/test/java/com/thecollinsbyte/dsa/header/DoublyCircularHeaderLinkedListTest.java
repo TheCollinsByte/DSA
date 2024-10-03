@@ -17,11 +17,11 @@ public class DoublyCircularHeaderLinkedListTest {
     }
 
     @Test
-    public void insertAtBeginning() {
-        integerList.insterAtBeginning(40);
-        integerList.insterAtBeginning(30);
-        integerList.insterAtBeginning(20);
-        integerList.insterAtBeginning(10);
+    public void testInsertAtBeginning() {
+        integerList.insertAtBeginning(40);
+        integerList.insertAtBeginning(30);
+        integerList.insertAtBeginning(20);
+        integerList.insertAtBeginning(10);
 
         List<Integer> result = integerList.traverseForward();
 
@@ -30,7 +30,21 @@ public class DoublyCircularHeaderLinkedListTest {
     }
 
     @Test
-    public void insertAtEnd() {
+    public void testInsertAtPosition() {
+        integerList.insertAtEnd(10);
+        integerList.insertAtEnd(20);
+        integerList.insertAtEnd(40);
+        integerList.insertAtEnd(50);
+        integerList.insertAtPosition(30, 3);
+
+        List<Integer> result = integerList.traverseForward();
+
+        assertEquals(List.of(10, 20, 30, 40, 50), result);
+        assertEquals(5, integerList.size());
+    }
+
+    @Test
+    public void testInsertAtEnd() {
         integerList.insertAtEnd(10);
         integerList.insertAtEnd(20);
         integerList.insertAtEnd(30);
@@ -44,10 +58,10 @@ public class DoublyCircularHeaderLinkedListTest {
 
     @Test
     public void testBidirectionalTraversal() {
-        integerList.insterAtBeginning(40);
-        integerList.insterAtBeginning(30);
-        integerList.insterAtBeginning(20);
-        integerList.insterAtBeginning(10);
+        integerList.insertAtBeginning(40);
+        integerList.insertAtBeginning(30);
+        integerList.insertAtBeginning(20);
+        integerList.insertAtBeginning(10);
 
         List<Integer> forwardTraverse = integerList.traverseForward();
         List<Integer> backwardTraverse = integerList.traverseBackward();

@@ -30,7 +30,7 @@ public class DoublyCircularHeaderLinkedList<T> {
         return size;
     }
 
-    public void insterAtBeginning(T data) {
+    public void insertAtBeginning(T data) {
         Node<T> newNode = new Node<>(data);
         newNode.next = header.next;
         newNode.prev = header;
@@ -39,6 +39,37 @@ public class DoublyCircularHeaderLinkedList<T> {
         size++;
     }
 
+    public void insertAtPosition(T data, int position) {
+        if(position < 1 || position > size + 1) {
+            throw new IllegalStateException("Position out of bounds");
+        }
+
+        if(position == 1) {
+            insertAtBeginning(data);
+            return;
+        }
+
+        if(position == size + 1) {
+            insertAtEnd(data);
+            return;
+        }
+
+        Node<T> newNode = new Node<>(data);
+        Node<T> current = header.next;
+        int currentPosition = 1;
+
+        while(currentPosition < position) {
+            current = current.next;
+            currentPosition++;
+        }
+
+        newNode.next = current;
+        newNode.prev = current.prev;
+        current.prev.next = newNode;
+        current.prev = newNode;
+
+        size++;
+    }
 
     public void insertAtEnd(T data) {
         Node<T> newNode = new Node<>(data);
