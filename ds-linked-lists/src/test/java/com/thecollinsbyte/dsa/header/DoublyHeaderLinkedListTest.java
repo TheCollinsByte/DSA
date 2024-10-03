@@ -27,6 +27,18 @@ public class DoublyHeaderLinkedListTest {
     }
 
     @Test
+    public void testInsertAtPosition() {
+        integerList.insertAtEnd(10);
+        integerList.insertAtEnd(20);
+        integerList.insertAtEnd(40);
+        integerList.insertAtEnd(50);
+        integerList.insertAtPosition(30, 3);
+
+        assertEquals(5, integerList.size());
+        assertEquals(List.of(10, 20, 30, 40, 50), integerList.traverseForward());
+    }
+
+    @Test
     public void testInsertAtEnd() {
         integerList.insertAtEnd(10);
         integerList.insertAtEnd(20);
