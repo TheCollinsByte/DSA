@@ -32,6 +32,20 @@ public class SinglyCircularHeaderLinkedListTest {
     }
 
     @Test
+    public void testInsertAtPosition() {
+        integerList.insertAtBeginning(10);
+        integerList.insertAtBeginning(20);
+        integerList.insertAtBeginning(40);
+        integerList.insertAtBeginning(50);
+        integerList.insertAtPosition(30, 3);
+
+        List<Integer> results = integerList.traverseForward();
+
+        assertEquals(5, integerList.size());
+        assertEquals(List.of(50, 40, 30, 20, 10), results);
+    }
+
+    @Test
     public void testInsertAtEnd() {
         integerList.insertAtEnd(10);
         integerList.insertAtEnd(20);
