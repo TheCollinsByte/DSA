@@ -1,5 +1,8 @@
 package com.thecollinsbyte.dsa.header;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DoublyCircularHeaderLinkedList<T> {
     private static class Node<T> {
         T data;
@@ -34,6 +37,22 @@ public class DoublyCircularHeaderLinkedList<T> {
         header.next.prev = newNode;
         header.next = newNode;
         size++;
+    }
+
+    public List<T> traverseForward() {
+        if(size == 0) {
+            throw new IllegalStateException("List is empty");
+        }
+
+        List<T> result = new ArrayList<>();
+        Node<T> current = header.next;
+
+        while(current != header) {
+            result.add(current.data);
+            current = current.next;
+        }
+
+        return result;
     }
 }
 
