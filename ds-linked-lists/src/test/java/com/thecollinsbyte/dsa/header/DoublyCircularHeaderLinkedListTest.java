@@ -99,6 +99,17 @@ public class DoublyCircularHeaderLinkedListTest {
     }
 
     @Test
+    public void testContain() {
+        integerList.insertAtEnd(10);
+        integerList.insertAtEnd(20);
+        integerList.insertAtEnd(30);
+        integerList.insertAtEnd(40);
+
+        assertEquals(true, integerList.contains(20));
+        assertEquals(false, integerList.contains(100));
+    }
+
+    @Test
     public void testBidirectionalTraversal() {
         integerList.insertAtBeginning(40);
         integerList.insertAtBeginning(30);

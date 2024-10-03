@@ -127,6 +127,20 @@ public class DoublyCircularHeaderLinkedList<T> {
         size--;
     }
 
+    public boolean contains(T data) {
+
+        Node<T> current = header.next;
+
+        while(current != header) {
+            if(current.data.equals(data)) {
+                return true;
+            }
+            current = current.next;
+        }
+
+        return false;
+    }
+
     public List<T> traverseForward() {
         if(size == 0) {
             throw new IllegalStateException("List is empty");
