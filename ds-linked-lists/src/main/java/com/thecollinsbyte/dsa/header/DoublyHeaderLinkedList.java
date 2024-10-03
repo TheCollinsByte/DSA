@@ -35,4 +35,13 @@ public class DoublyHeaderLinkedList<T> {
         header.next = newNode;
         size++;
     }
+
+    public void insertAtEnd(T data) {
+        Node<T> newNode = new Node<>(data);
+        newNode.prev = header.prev;
+        newNode.next = header;
+        header.prev.next = newNode;
+        header.prev = newNode;
+        size++;
+    }
 }
