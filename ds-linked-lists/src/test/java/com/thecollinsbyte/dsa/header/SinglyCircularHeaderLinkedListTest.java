@@ -44,4 +44,19 @@ public class SinglyCircularHeaderLinkedListTest {
         assertEquals(5, integerList.size());
         assertEquals(List.of(10, 20, 30, 40, 50), results);
     }
+
+    @Test
+    public void testBidirectionalTraversal() {
+        integerList.insertAtEnd(10);
+        integerList.insertAtEnd(20);
+        integerList.insertAtEnd(30);
+        integerList.insertAtEnd(40);
+        integerList.insertAtEnd(50);
+
+        List<Integer> forwardTraverse = integerList.traverseForward();
+        List<Integer> backwardTraverse = integerList.traverseBackward();
+
+        assertEquals(List.of(10, 20, 30, 40, 50), forwardTraverse);
+        assertEquals(List.of(50, 40, 30, 20, 10), backwardTraverse);
+    }
 }

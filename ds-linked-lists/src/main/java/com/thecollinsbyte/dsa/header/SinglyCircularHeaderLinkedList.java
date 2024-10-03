@@ -75,4 +75,25 @@ public class SinglyCircularHeaderLinkedList<T> {
 
         return result;
     }
+
+    public List<T> traverseBackward() {
+        if (size == 0 || header.next == header) {
+            throw new IllegalStateException("List is empty");
+        }
+
+        List<T> result = new ArrayList<>();
+        Node<T> current = header.next;
+
+        do {
+            result.add(current.data);
+            current = current.next;
+        } while (current != header);
+
+        List<T> reversedResult = new ArrayList<>();
+        for (int i = result.size() - 1; i >= 0; i--) {
+            reversedResult.add(result.get(i));
+        }
+
+        return reversedResult;
+    }
 }
