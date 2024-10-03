@@ -99,6 +99,36 @@ public class SinglyCircularHeaderLinkedList<T> {
         size--;
     }
 
+    public void deleteAtPosition(int position) {
+        if(size == 0 || header.next == header) {
+            throw new IllegalStateException("List is empty");
+        }
+
+        if(position < 1 || position > size + 1) {
+            throw new IllegalStateException("Position out of bounds");
+        }
+        if(position == 1) {
+            deleteFirst();
+            return;
+        }
+        if(position == size + 1) {
+            deleteLast();
+            return;
+        }
+
+        int currentPosition = 1;
+        Node<T> current = header;
+
+        while(currentPosition < position) {
+            current = current.next;
+            currentPosition++;
+        }
+
+        current.next = current.next.next;
+
+        size--;
+    }
+
     public void deleteLast() {
         if(size == 0 || header.next == header) {
             throw new IllegalStateException("List is empty");
