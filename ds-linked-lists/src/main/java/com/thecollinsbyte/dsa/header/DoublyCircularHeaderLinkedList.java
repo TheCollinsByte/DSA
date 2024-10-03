@@ -39,6 +39,16 @@ public class DoublyCircularHeaderLinkedList<T> {
         size++;
     }
 
+
+    public void insertAtEnd(T data) {
+        Node<T> newNode = new Node<>(data);
+        newNode.prev = header.prev;
+        newNode.next = header;
+        header.prev.next = newNode;
+        header.prev = newNode;
+        size++;
+    }
+
     public List<T> traverseForward() {
         if(size == 0) {
             throw new IllegalStateException("List is empty");

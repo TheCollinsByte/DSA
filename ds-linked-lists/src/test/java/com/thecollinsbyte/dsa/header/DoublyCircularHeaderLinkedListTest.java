@@ -30,6 +30,19 @@ public class DoublyCircularHeaderLinkedListTest {
     }
 
     @Test
+    public void insertAtEnd() {
+        integerList.insertAtEnd(10);
+        integerList.insertAtEnd(20);
+        integerList.insertAtEnd(30);
+        integerList.insertAtEnd(40);
+
+        List<Integer> result = integerList.traverseForward();
+
+        assertEquals(List.of(10, 20, 30, 40), result);
+        assertEquals(4, integerList.size());
+    }
+
+    @Test
     public void testBidirectionalTraversal() {
         integerList.insterAtBeginning(40);
         integerList.insterAtBeginning(30);
