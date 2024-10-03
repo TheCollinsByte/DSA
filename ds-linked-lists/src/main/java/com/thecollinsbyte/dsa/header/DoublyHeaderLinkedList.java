@@ -89,6 +89,15 @@ public class DoublyHeaderLinkedList<T> {
         size--;
     }
 
+    public void deleteLast() {
+        if(size == 0 || header.next == null) {
+            throw new IllegalStateException("List is empty");
+        }
+        header.prev = header.prev.prev;
+        header.prev.next = header;
+        size--;
+    }
+
     public List<T> traverseForward() {
         if(size == 0) {
             throw new IllegalStateException("List is empty");
