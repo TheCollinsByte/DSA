@@ -1,5 +1,8 @@
 package com.thecollinsbyte.dsa.header;
 
+import java.util.List;
+import java.util.ArrayList;
+
 public class DoublyHeaderLinkedList<T> {
 
     static class Node<T> {
@@ -43,5 +46,20 @@ public class DoublyHeaderLinkedList<T> {
         header.prev.next = newNode;
         header.prev = newNode;
         size++;
+    }
+
+    public List<T> traverseForward() {
+        if(size == 0) {
+            throw new IllegalStateException("List is empty");
+        }
+        List<T> results = new ArrayList<T>();
+        Node<T> current = header.next;
+
+        while(current != header) {
+            results.add(current.data);
+            current = current.next;
+        }
+
+        return results;
     }
 }
