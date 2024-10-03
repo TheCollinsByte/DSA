@@ -59,6 +59,21 @@ public class SinglyCircularHeaderLinkedListTest {
     }
 
     @Test
+    public void testDeleteFirst() {
+        integerList.insertAtEnd(10);
+        integerList.insertAtEnd(20);
+        integerList.insertAtEnd(30);
+        integerList.insertAtEnd(40);
+        integerList.insertAtEnd(50);
+        integerList.deleteFirst();
+
+        List<Integer> results = integerList.traverseForward();
+
+        assertEquals(4, integerList.size());
+        assertEquals(List.of(20, 30, 40, 50), results);
+    }
+
+    @Test
     public void testContains() {
         integerList.insertAtEnd(10);
         integerList.insertAtEnd(20);
