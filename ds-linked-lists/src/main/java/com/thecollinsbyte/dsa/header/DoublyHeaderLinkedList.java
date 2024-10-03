@@ -62,4 +62,19 @@ public class DoublyHeaderLinkedList<T> {
 
         return results;
     }
+
+    public List<T> traverseBackward() {
+        if(size == 0) {
+            throw new IllegalStateException("List is empty");
+        }
+
+        List<T> results = new ArrayList<>();
+        Node<T> current = header.prev;
+        while(current != header) {
+            results.add(current.data);
+            current = current.prev;
+        }
+
+        return results;
+    }
 }

@@ -49,4 +49,17 @@ public class DoublyHeaderLinkedListTest {
 
         assertEquals(List.of(10, 20, 30, 40, 50), results);
     }
+
+    @Test
+    public void testForwardBackward() {
+        integerList.insertAtEnd(10);
+        integerList.insertAtEnd(20);
+        integerList.insertAtEnd(30);
+        integerList.insertAtEnd(40);
+        integerList.insertAtEnd(50);
+
+        List<Integer> results = integerList.traverseBackward();
+
+        assertEquals(List.of(50, 40, 30, 20, 10), results);
+    }
 }
