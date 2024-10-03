@@ -25,7 +25,7 @@ public class CircularDoublyLinkedList<T> {
     public CircularDoublyLinkedList() {
         this.head = null;
         this.tail = null;
-        size = 0;
+        this.size = 0;
     }
 
     public int size() {

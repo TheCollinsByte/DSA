@@ -20,6 +20,7 @@ public class SinglyHeaderLinkedList<T> {
 
     public SinglyHeaderLinkedList() {
         this.header = new Node(null);
+        this.size = 0;
     }
 
     public int size() {
