@@ -89,6 +89,35 @@ public class DoublyCircularHeaderLinkedList<T> {
         size--;
     }
 
+    public void deleteAtPosition(int position) {
+        if(position < 1 || position > size + 1) {
+            throw new IllegalStateException("Position out of bounds");
+        }
+
+        if(position == 1) {
+            deleteFirst();
+            return;
+        }
+
+        if(position == size + 1) {
+            deleteLast();
+            return;
+        }
+
+        Node<T> current = header.next;
+        int currentPosition = 1;
+
+        while(currentPosition < position) {
+            current = current.next;
+            currentPosition++;
+        }
+
+        current.prev.next = current.next;
+        current.next.prev = current.prev;
+
+        size--;
+    }
+
     public void deleteLast() {
         if(size == 0 || header.next == header) {
             throw new IllegalStateException("List is empty");
