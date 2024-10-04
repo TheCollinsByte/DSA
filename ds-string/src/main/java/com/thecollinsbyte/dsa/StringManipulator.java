@@ -38,6 +38,11 @@ public class StringManipulator{
         return this.value.indexOf(substring);
     }
 
+    public StringManipulator replace(String oldChar, String newChar) {
+        String modifiedValue = this.value.replace(oldChar, newChar);
+        return new StringManipulator(modifiedValue);
+    }
+
     @Override
     public String toString() {
         return value;

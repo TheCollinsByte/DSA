@@ -55,4 +55,10 @@ public class StringManipulatorTest {
         assertEquals(0, str.indexOf("Insta"));
         assertEquals(5, str.indexOf("Job"));
     }
+
+    @Test
+    public void testReplace() {
+        StringManipulator result = str.replace("InstaByte", "InstaJob");
+        assertEquals("InstaJob", result.toString());
+    }
 }
