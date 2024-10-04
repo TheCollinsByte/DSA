@@ -23,4 +23,10 @@ public class StringManipulatorTest {
         char c = str.charAt(5);
         assertEquals('J', c);
     }
+
+    @Test
+    public void testSubstring() {
+        StringManipulator stringManipulator = str.substring(5, 8);
+        assertEquals("Job", stringManipulator.toString());
+    }
 }

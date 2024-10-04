@@ -15,4 +15,14 @@ public class StringManipulator{
     public char charAt(int index) {
         return value.charAt(index);
     }
+
+    public StringManipulator substring(int start, int end) {
+        String substringValue = value.substring(start, end);
+        return new StringManipulator(substringValue);
+    }
+
+    @Override
+    public String toString() {
+        return value;
+    }
 }
