@@ -1,6 +1,7 @@
 package com.thecollinsbyte.dsa;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -40,5 +41,12 @@ public class StringManipulatorTest {
     public void testEquals() {
         assertEquals(false, str.equals(new StringManipulator("InstaByte")));
         assertEquals(true, str.equals(new StringManipulator("InstaJob")));
+    }
+
+    @Test
+    public void testCompareTo() {
+        StringManipulator str1 = new StringManipulator("InstaByte");
+        StringManipulator str2 = new StringManipulator("InstaJob");
+        assertTrue(str1.compareTo(str2) < 0);
     }
 }

@@ -30,6 +30,10 @@ public class StringManipulator{
         return this.value.equals(string.value);
     }
 
+    public int compareTo(StringManipulator string) {
+        return this.value.compareTo(string.value);
+    }
+
     @Override
     public String toString() {
         return value;
