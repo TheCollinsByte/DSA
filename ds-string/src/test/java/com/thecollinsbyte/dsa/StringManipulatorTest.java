@@ -35,4 +35,10 @@ public class StringManipulatorTest {
         StringManipulator stringManipulator = str.concatenate(new StringManipulator(".io"));
         assertEquals("InstaJob.io", stringManipulator.toString());
     }
+
+    @Test
+    public void testEquals() {
+        assertEquals(false, str.equals(new StringManipulator("InstaByte")));
+        assertEquals(true, str.equals(new StringManipulator("InstaJob")));
+    }
 }

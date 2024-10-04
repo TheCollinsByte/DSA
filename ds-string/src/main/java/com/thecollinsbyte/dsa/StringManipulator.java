@@ -26,6 +26,10 @@ public class StringManipulator{
         return new StringManipulator(concatenatedValue);
     }
 
+    public boolean equals(StringManipulator string) {
+        return this.value.equals(string.value);
+    }
+
     @Override
     public String toString() {
         return value;
