@@ -1,6 +1,5 @@
 package com.thecollinsbyte.dsa;
 
-import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -17,5 +16,11 @@ public class StringManipulatorTest {
     @Test
     public void testLength() {
         assertEquals(8, str.length());
+    }
+
+    @Test
+    public void testCharAtIndex() {
+        char c = str.charAt(5);
+        assertEquals('J', c);
     }
 }

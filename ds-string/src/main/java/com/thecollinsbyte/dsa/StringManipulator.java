@@ -11,4 +11,8 @@ public class StringManipulator{
     public int length() {
         return value.length();
     }
+
+    public char charAt(int index) {
+        return value.charAt(index);
+    }
 }
