@@ -34,6 +34,10 @@ public class StringManipulator{
         return this.value.compareTo(string.value);
     }
 
+    public int indexOf(String substring) {
+        return this.value.indexOf(substring);
+    }
+
     @Override
     public String toString() {
         return value;

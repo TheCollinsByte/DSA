@@ -49,4 +49,10 @@ public class StringManipulatorTest {
         StringManipulator str2 = new StringManipulator("InstaJob");
         assertTrue(str1.compareTo(str2) < 0);
     }
+
+    @Test
+    public void testIndexOf() {
+        assertEquals(0, str.indexOf("Insta"));
+        assertEquals(5, str.indexOf("Job"));
+    }
 }
