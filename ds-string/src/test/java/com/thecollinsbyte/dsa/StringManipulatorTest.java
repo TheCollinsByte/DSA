@@ -29,4 +29,10 @@ public class StringManipulatorTest {
         StringManipulator stringManipulator = str.substring(5, 8);
         assertEquals("Job", stringManipulator.toString());
     }
+
+    @Test
+    public void testStringConcatenation() {
+        StringManipulator stringManipulator = str.concatenate(new StringManipulator(".io"));
+        assertEquals("InstaJob.io", stringManipulator.toString());
+    }
 }

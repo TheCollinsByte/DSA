@@ -21,6 +21,11 @@ public class StringManipulator{
         return new StringManipulator(substringValue);
     }
 
+    public StringManipulator concatenate(StringManipulator string) {
+        String concatenatedValue = this.value + string.value;
+        return new StringManipulator(concatenatedValue);
+    }
+
     @Override
     public String toString() {
         return value;
