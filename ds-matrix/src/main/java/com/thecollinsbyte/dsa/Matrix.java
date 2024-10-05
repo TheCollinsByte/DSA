@@ -27,6 +27,20 @@ public class Matrix<T extends Number> {
         }
     }
 
+    public void insertAtEnd(T[] elements) {
+        if(elements == null) throw new IllegalStateException("Elements array cannot be null");
+
+        if(cols == 0 && rows == 0) {
+            resizeMatrix(1, elements.length);
+            System.arraycopy(elements, 0, data[0], 0, elements.length);
+        } else if(elements.length != cols) {
+            throw new IllegalStateException("Number of elements must match the number of columns in the matrix");
+        } else {
+            resizeMatrix(rows + 1, cols);
+            System.arraycopy(elements, 0, data[rows - 1], 0, cols);
+        }
+    }
+
     public T[][] getData() {
         return data;
     }
