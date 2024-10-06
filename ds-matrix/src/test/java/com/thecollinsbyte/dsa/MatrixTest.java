@@ -9,9 +9,9 @@ public class MatrixTest {
     public void testInsertAtBeginning() {
         Integer[][] data = {{1, 2}, {3, 4}};
         Matrix<Integer> matrix = new Matrix<>(2, 2, data);
-        matrix.insertAtBeginning(0);
+        matrix.insertAtBeginning(new Integer[]{7, 8});
 
-        Integer[][] expected = {{0, 0}, {1, 2}, {3, 4}};
+        Integer[][] expected = {{7, 8}, {1, 2}, {3, 4}};
         assertArrayEquals(expected, matrix.getData());
     }
 
@@ -19,9 +19,9 @@ public class MatrixTest {
     public void testInsertAtBeginningEmptyMatrix() {
         Integer[][] emptyData = {};
         Matrix<Integer> matrix = new Matrix<>(0, 0, emptyData);
-        matrix.insertAtBeginning(5);
+        matrix.insertAtBeginning(new Integer[]{7, 8});
 
-        Integer[][] expected = {{5}};
+        Integer[][] expected = {{7, 8}};
         assertArrayEquals(expected, matrix.getData());
     }
 }

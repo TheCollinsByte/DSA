@@ -12,16 +12,18 @@ public class Matrix<T extends Number> {
         this.data = data;
     }
 
-    public void insertAtBeginning(T element) {
+    public void insertAtBeginning(T[] elements) {
+        if(elements == null) throw new IllegalStateException("Elements array cannot be null");
+
         if (rows == 0 && cols == 0) {
-            resizeMatrix(1, 1);
-            data[0][0] = element;
-        } else {
+            resizeMatrix(1, elements.length);
+            System.arraycopy(elements, 0, data[0], 0, elements.length);
+        } else if(elements.length != cols) {
+            throw new IllegalStateException("Number of elements must match the number of columns in the matrix");
+        }else {
             resizeMatrix(rows + 1, cols);
             shiftDown(0);
-            for (int i = 0; i < cols; i++) {
-                data[0][i] = element;
-            }
+            System.arraycopy(elements, 0, data[0], 0, cols);
         }
     }
 
