@@ -3,6 +3,7 @@ rootProject.name = 'DSA'
 include ('ds-arrays')
 include ('ds-linked-lists')
 include ('ds-string')
+include ('ds-matrix')
 include ('ds-hash-tables')
 include ('ds-trees')
 include ('ds-stacks')
