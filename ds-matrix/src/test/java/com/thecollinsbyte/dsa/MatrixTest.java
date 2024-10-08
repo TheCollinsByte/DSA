@@ -71,6 +71,14 @@ public class MatrixTest {
     }
 
     @Test
+    public void testGetElement() {
+        Integer[][] data = {{10, 20, 30}, {40, 50, 60}, {70, 80, 90}};
+        Matrix<Integer> matrix = new Matrix<>(3, 3, data);
+
+        assertEquals(10, matrix.get(0, 0));
+    }
+
+    @Test
     public void testTraverseRowWise() {
         Integer[][] data = {
             {10, 20, 30},

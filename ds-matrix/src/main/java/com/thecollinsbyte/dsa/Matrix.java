@@ -93,6 +93,18 @@ public class Matrix<T extends Number> {
         }
     }
 
+    public T get(int row, int col) {
+        if(isValidPosition(row, col)) {
+            return data[row][col];
+        } else {
+            throw new IllegalStateException("Invalid matrix position");
+        }
+    }
+
+    private boolean isValidPosition(int row, int col) {
+        return row >= 0 && row < rows && col >= 0 && col < cols;
+    }
+
     public T[][] getData() {
         return data;
     }
