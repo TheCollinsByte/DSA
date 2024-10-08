@@ -68,6 +68,31 @@ public class Matrix<T extends Number> {
         }
     }
 
+    public void traverse() {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                System.out.print(data[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public void traverseRowWise(MatrixElementVisitor<T> visitor) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                visitor.visit(i, j, data[i][j]);
+            }
+        }
+    }
+
+    public void traverseColumnWise(MatrixElementVisitor<T> visitor) {
+        for (int j = 0; j < cols; j++) {
+            for (int i = 0; i < rows; i++) {
+                visitor.visit(i, j, data[i][j]);
+            }
+        }
+    }
+
     public T[][] getData() {
         return data;
     }
@@ -92,5 +117,9 @@ public class Matrix<T extends Number> {
 
     private T[][] createEmptyMatrix(int rows, int cols) {
          return (T[][]) new Number[rows][cols];
+    }
+
+    public interface MatrixElementVisitor<T> {
+        void visit(int row, int col, T element);
     }
 }

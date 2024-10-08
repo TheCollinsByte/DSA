@@ -1,6 +1,10 @@
 package com.thecollinsbyte.dsa;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.List;
+import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
 
@@ -64,5 +68,31 @@ public class MatrixTest {
 
         Integer[][] expected = {{10, 20, 30}};
         assertArrayEquals(expected, matrix.getData());
+    }
+
+    @Test
+    public void testTraverseRowWise() {
+        Integer[][] data = {
+            {10, 20, 30},
+            {40, 50, 60},
+            {70, 80, 90},
+        };
+        Matrix<Integer> matrix = new Matrix<>(3, 3, data);
+        List<Integer> result = new ArrayList<>();
+        matrix.traverseRowWise((row, col, element) -> result.add(element));
+        assertEquals(List.of(10, 20, 30, 40, 50, 60, 70, 80, 90), result);
+    }
+
+    @Test
+    public void testTraverseColumnWise() {
+        Integer[][] data = {
+            {10, 20, 30},
+            {40, 50, 60},
+            {70, 80, 90},
+        };
+        Matrix<Integer> matrix = new Matrix<>(3, 3, data);
+        List<Integer> result = new ArrayList<>();
+        matrix.traverseColumnWise((row, col, element) -> result.add(element));
+        assertEquals(List.of(10, 40, 70, 20, 50, 80, 30, 60, 90), result);
     }
 }
