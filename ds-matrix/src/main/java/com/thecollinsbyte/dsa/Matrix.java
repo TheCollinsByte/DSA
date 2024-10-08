@@ -101,6 +101,19 @@ public class Matrix<T extends Number> {
         }
     }
 
+    public boolean contains(T element) {
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if(element.equals(data[i][j])) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
     private boolean isValidPosition(int row, int col) {
         return row >= 0 && row < rows && col >= 0 && col < cols;
     }

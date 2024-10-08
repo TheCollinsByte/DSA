@@ -2,6 +2,8 @@ package com.thecollinsbyte.dsa;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -76,6 +78,15 @@ public class MatrixTest {
         Matrix<Integer> matrix = new Matrix<>(3, 3, data);
 
         assertEquals(10, matrix.get(0, 0));
+    }
+
+    @Test
+    public void testContainsElement() {
+        Integer[][] data = {{10, 20, 30}, {40, 50, 60}, {70, 80, 90}};
+        Matrix<Integer> matrix = new Matrix<>(3, 3, data);
+
+        assertTrue(matrix.contains(30));
+        assertFalse(matrix.contains(100));
     }
 
     @Test
