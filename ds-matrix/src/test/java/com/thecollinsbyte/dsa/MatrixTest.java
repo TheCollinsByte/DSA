@@ -45,4 +45,24 @@ public class MatrixTest {
         Integer[][] expected = {{10, 20, 30}, {40, 50, 60}};
         assertArrayEquals(expected, matrix.getData());
     }
+
+    @Test
+    public void testInsertAtPosition() {
+        Integer[][] data = {{1, 1, 1}, {2, 2, 2}, {3, 3, 3}};
+        Matrix<Integer> matrix = new Matrix<>(3, 3, data);
+        matrix.insertAtPosition(1, new Integer[]{4, 4, 4});
+
+        Integer[][] expected = {{4, 4, 4}, {1, 1, 1}, {2, 2, 2}, {3, 3, 3}};
+        assertArrayEquals(expected, matrix.getData());
+    }
+
+    @Test
+    public void testInsertAtPositionEmptyMatrix() {
+        Integer[][] data = {};
+        Matrix<Integer> matrix = new Matrix<>(0, 0, data);
+        matrix.insertAtPosition(1, new Integer[]{10, 20, 30});
+
+        Integer[][] expected = {{10, 20, 30}};
+        assertArrayEquals(expected, matrix.getData());
+    }
 }
