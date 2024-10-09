@@ -156,4 +156,20 @@ public class MatrixTest {
         assertEquals(43.0, result.get(1, 0));
         assertEquals(50.0, result.get(1, 1));
     }
+
+    @Test
+    public void testRotation() {
+        Integer[][] data = {
+            {1, 2},
+            {3, 4},
+        };
+        Matrix<Integer> matrix = new Matrix<>(2, 2, data);
+
+        matrix.rotate90DegreesClockwise();
+
+        assertEquals(3, matrix.get(0, 0));
+        assertEquals(1, matrix.get(0, 1));
+        assertEquals(4, matrix.get(1, 0));
+        assertEquals(2, matrix.get(1, 1));
+    }
 }

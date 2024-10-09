@@ -14,9 +14,12 @@ public class Matrix<T extends Number> {
 
     /**
      * TODO:
-     *     1. Addition: Perform element-wise matrix addition
-     *     2. Multiplication: Multiply matrices for complex computations
-     *     3. Rotation: Rotate the matrix elements to transform the structure
+     *  - Traverse a given Matrix using Recursion
+     *  - Sort the given matrix
+     *  - Search element in a sorted matrix
+     *  - Program to find transpose of a matrix
+     *  - Adjoint and Inverse of a Matrix
+     *  - Determinant of a Matrix
      */
 
     public void insertAtBeginning(T[] elements) {
@@ -162,6 +165,20 @@ public class Matrix<T extends Number> {
         }
 
         return new Matrix<>(this.rows, matrix.cols, result);
+    }
+
+    public void rotate90DegreesClockwise() {
+        T[][] rotated = createEmptyMatrix(rows, cols);
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                rotated[j][rows - 1 - i] = data[i][j];
+            }
+        }
+
+        data = rotated;
+        int temp = rows;
+        rows = cols;
+        cols = temp;
     }
 
     private void resizeMatrix(int newRows, int newCols) {
