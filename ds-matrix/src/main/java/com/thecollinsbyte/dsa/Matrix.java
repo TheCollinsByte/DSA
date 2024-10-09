@@ -146,6 +146,24 @@ public class Matrix<T extends Number> {
         return new Matrix<>(rows, cols, result);
     }
 
+    public Matrix<Double> multiply(Matrix<T> matrix) {
+        if(this.cols != matrix.rows) {
+            throw new IllegalArgumentException("Matrices must have compatible dimensions for multiplication.");
+        }
+
+        Double[][] result = new Double[this.rows][matrix.cols];
+        for (int i = 0; i < this.rows; i++) {
+            for (int j = 0; j < matrix.cols; j++) {
+                result[i][j] = 0.0;
+                for (int k = 0; k < this.cols; k++) {
+                    result[i][j] = result[i][j] + this.data[i][k].doubleValue() * matrix.data[k][j].doubleValue();
+                }
+            }
+        }
+
+        return new Matrix<>(this.rows, matrix.cols, result);
+    }
+
     private void resizeMatrix(int newRows, int newCols) {
         T[][] newData = createEmptyMatrix(newRows, newCols);
 

@@ -135,4 +135,25 @@ public class MatrixTest {
         assertEquals(10.0, result.get(1, 0));
         assertEquals(12.0, result.get(1, 1));
     }
+
+    @Test
+    public void testMultiplication() {
+        Integer[][] firstDataSet = {
+            {1, 2},
+            {3, 4},
+        };
+        Integer[][] secondDataSet = {
+            {5, 6},
+            {7, 8},
+        };
+        Matrix<Integer> firstMatrix = new Matrix<>(2, 2, firstDataSet);
+        Matrix<Integer> secondMatrix = new Matrix<>(2, 2, secondDataSet);
+
+        Matrix<Double> result = firstMatrix.multiply(secondMatrix);
+
+        assertEquals(19.0, result.get(0, 0));
+        assertEquals(22.0, result.get(0, 1));
+        assertEquals(43.0, result.get(1, 0));
+        assertEquals(50.0, result.get(1, 1));
+    }
 }
