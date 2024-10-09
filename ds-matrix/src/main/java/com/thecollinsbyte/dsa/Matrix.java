@@ -12,6 +12,13 @@ public class Matrix<T extends Number> {
         this.data = data;
     }
 
+    /**
+     * TODO:
+     *     1. Addition: Perform element-wise matrix addition
+     *     2. Multiplication: Multiply matrices for complex computations
+     *     3. Rotation: Rotate the matrix elements to transform the structure
+     */
+
     public void insertAtBeginning(T[] elements) {
         if(elements == null) throw new IllegalStateException("Elements array cannot be null");
 
@@ -120,6 +127,23 @@ public class Matrix<T extends Number> {
 
     public T[][] getData() {
         return data;
+    }
+
+    public Matrix<Double> add(Matrix<T> matrix) {
+
+        if(this.rows != matrix.rows || this.cols != matrix.cols) {
+            throw new IllegalArgumentException("Matrices must have the same dimensions for addition.");
+        }
+
+        Double[][] result = new Double[rows][cols];
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                result[i][j] = this.data[i][j].doubleValue() + matrix.data[i][j].doubleValue();
+            }
+        }
+
+        return new Matrix<>(rows, cols, result);
     }
 
     private void resizeMatrix(int newRows, int newCols) {

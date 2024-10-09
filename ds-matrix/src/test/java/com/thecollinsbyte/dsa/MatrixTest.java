@@ -114,4 +114,25 @@ public class MatrixTest {
         matrix.traverseColumnWise((row, col, element) -> result.add(element));
         assertEquals(List.of(10, 40, 70, 20, 50, 80, 30, 60, 90), result);
     }
+
+    @Test
+    public void testAddition() {
+        Integer[][] firstDataSet = {
+            {1, 2},
+            {3, 4},
+        };
+        Integer[][] secondDataSet = {
+            {5, 6},
+            {7, 8},
+        };
+        Matrix<Integer> firstMatrix = new Matrix<>(2, 2, firstDataSet);
+        Matrix<Integer> secondMatrix = new Matrix<>(2, 2, secondDataSet);
+
+        Matrix<Double> result = firstMatrix.add(secondMatrix);
+
+        assertEquals(6.0, result.get(0, 0));
+        assertEquals(8.0, result.get(0, 1));
+        assertEquals(10.0, result.get(1, 0));
+        assertEquals(12.0, result.get(1, 1));
+    }
 }
