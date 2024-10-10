@@ -37,12 +37,14 @@ public class ArrayQueue<T> implements Queue<T> {
 
     @Override
     public T peek() {
-        return null;
+        if(isEmpty()) throw new IllegalStateException("Queue is empty");
+        return queue[front];
     }
 
     @Override
     public T rear() {
-        return null;
+        if(isEmpty()) throw new IllegalStateException("Queue is empty");
+        return queue[rear];
     }
 
     @Override
