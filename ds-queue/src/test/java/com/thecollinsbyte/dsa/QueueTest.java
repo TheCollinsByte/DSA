@@ -10,11 +10,15 @@ public class QueueTest {
 
     @Test
     public void testEnqueueDequeue() {
-        testEnqueueDequeue(new ArrayQueue<>());
+        testEnqueueDequeueImpl(new ArrayQueue<>());
     }
 
+    @Test
+    public void testPeek() {
+        testPeekImpl(new ArrayQueue<>());
+    }
 
-    private void testEnqueueDequeue(Queue<Integer> queue) {
+    private void testEnqueueDequeueImpl(Queue<Integer> queue) {
         queue.enqueue(10);
         queue.enqueue(20);
         queue.enqueue(30);
@@ -25,5 +29,13 @@ public class QueueTest {
         assertEquals(20, queue.dequeue());
         assertEquals(30, queue.dequeue());
         assertTrue(queue.isEmpty());
+    }
+
+    private void testPeekImpl(Queue<String> queue) {
+        queue.enqueue("First");
+        queue.enqueue("Second");
+
+        assertEquals("First", queue.peek());
+        assertEquals(2, queue.size());
     }
 }
