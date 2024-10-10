@@ -27,7 +27,12 @@ public class ArrayQueue<T> implements Queue<T> {
 
     @Override
     public T dequeue() {
-        return null;
+        if(isEmpty()) throw new IllegalStateException("Queue is empty");
+        T item = queue[front];
+        queue[front] = null;
+        front = (front + 1) % queue.length;
+        size--;
+        return item;
     }
 
     @Override
