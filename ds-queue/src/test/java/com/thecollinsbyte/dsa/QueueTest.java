@@ -12,36 +12,43 @@ public class QueueTest {
     @Test
     public void testEnqueueDequeue() {
         testEnqueueDequeueImpl(new ArrayQueue<>());
+        testEnqueueDequeueImpl(new LinkedListQueue<>());
     }
 
     @Test
     public void testPeek() {
         testPeekImpl(new ArrayQueue<>());
+        testPeekImpl(new LinkedListQueue<>());
     }
 
     @Test
     public void testRear() {
         testRearImpl(new ArrayQueue<>());
+        testRearImpl(new LinkedListQueue<>());
     }
 
     @Test
     public void testIsEmpty() {
         testIsEmptyImpl(new ArrayQueue<>());
+        testIsEmptyImpl(new LinkedListQueue<>());
     }
 
     @Test
     public void testIsFull() {
         testIsFullImpl(new ArrayQueue<>());
+        testIsFullImpl(new LinkedListQueue<>());
     }
 
     @Test
     public void testSize() {
         testSizeImpl(new ArrayQueue<>());
+        testSizeImpl(new LinkedListQueue<>());
     }
 
     @Test
     public void testExceptions() {
         testExceptionImpl(new ArrayQueue<>());
+        testExceptionImpl(new LinkedListQueue<>());
     }
 
     private void testEnqueueDequeueImpl(Queue<Integer> queue) {
