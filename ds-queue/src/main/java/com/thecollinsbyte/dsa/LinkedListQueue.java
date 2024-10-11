@@ -7,8 +7,8 @@ public class LinkedListQueue<T> implements Queue<T> {
         T data;
 
         public Node(T data) {
-            data = this.data;
-            next = null;
+            this.data = data;
+            this.next = null;
         }
     }
 
@@ -24,7 +24,13 @@ public class LinkedListQueue<T> implements Queue<T> {
 
     @Override
     public void enqueue(T data) {
-        Node<T> item = new Node<>(data);
+        Node<T> newNode = new Node<>(data);
+        if(isEmpty()) {
+            front = newNode;
+            return;
+        }
+        rear.next = newNode;
+        rear = newNode;
         size++;
     }
 
@@ -41,6 +47,7 @@ public class LinkedListQueue<T> implements Queue<T> {
 
     @Override
     public T rear() {
+        if(isEmpty()) throw new IllegalStateException("Queue is empty");
         return null;
     }
 
