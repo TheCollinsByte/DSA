@@ -27,6 +27,8 @@ public class LinkedListQueue<T> implements Queue<T> {
         Node<T> newNode = new Node<>(data);
         if(isEmpty()) {
             front = newNode;
+            rear = newNode;
+            size++;
             return;
         }
         rear.next = newNode;
@@ -36,19 +38,24 @@ public class LinkedListQueue<T> implements Queue<T> {
 
     @Override
     public T dequeue() {
+        if(isEmpty()) throw new IllegalStateException("Queue is empty");
+        T item = front.data;
+        front = front.next;
         size--;
-        return null;
+        if(isEmpty()) rear = null;
+        return item;
     }
 
     @Override
     public T peek() {
-        return null;
+        if(isEmpty()) throw new IllegalStateException("Queue is empty");
+        return front.data;
     }
 
     @Override
     public T rear() {
         if(isEmpty()) throw new IllegalStateException("Queue is empty");
-        return null;
+        return rear.data;
     }
 
     @Override
