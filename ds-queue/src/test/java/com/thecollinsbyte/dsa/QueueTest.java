@@ -33,6 +33,12 @@ public class QueueTest {
         testIsFullImpl(new ArrayQueue<>());
     }
 
+    @Test
+    public void testSize() {
+        testSizeImpl(new ArrayQueue<>());
+    }
+
+    @Test
     private void testEnqueueDequeueImpl(Queue<Integer> queue) {
         queue.enqueue(10);
         queue.enqueue(20);
@@ -82,5 +88,15 @@ public class QueueTest {
         } else {
             assertFalse(queue.isFull());    // LinkedList is never full
         }
+    }
+
+    private void testSizeImpl(Queue<Integer> queue) {
+        assertEquals(0, queue.size());
+        queue.enqueue(10);
+        assertEquals(1, queue.size());
+        queue.enqueue(20);
+        assertEquals(2, queue.size());
+        queue.dequeue();
+        assertEquals(1, queue.size());
     }
 }
