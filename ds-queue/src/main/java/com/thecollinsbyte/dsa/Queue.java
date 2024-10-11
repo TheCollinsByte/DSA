@@ -7,4 +7,5 @@ public interface Queue<T> {
     T rear();
     boolean isFull();
     boolean isEmpty();
+    int size();
 }
