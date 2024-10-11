@@ -18,6 +18,11 @@ public class QueueTest {
         testPeekImpl(new ArrayQueue<>());
     }
 
+    @Test
+    public void testRear() {
+        testRearImpl(new ArrayQueue<>());
+    }
+
     private void testEnqueueDequeueImpl(Queue<Integer> queue) {
         queue.enqueue(10);
         queue.enqueue(20);
@@ -37,5 +42,14 @@ public class QueueTest {
 
         assertEquals("First", queue.peek());
         assertEquals(2, queue.size());
+    }
+
+    private void testRearImpl(Queue<String> queue) {
+        queue.enqueue("First");
+        queue.enqueue("Second");
+        queue.enqueue("Third");
+
+        assertEquals("Third", queue.rear());
+        assertEquals(3, queue.size());
     }
 }
