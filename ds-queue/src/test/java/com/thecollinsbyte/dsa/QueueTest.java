@@ -2,6 +2,7 @@ package com.thecollinsbyte.dsa;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
@@ -39,6 +40,10 @@ public class QueueTest {
     }
 
     @Test
+    public void testExceptions() {
+        testExceptionImpl(new ArrayQueue<>());
+    }
+
     private void testEnqueueDequeueImpl(Queue<Integer> queue) {
         queue.enqueue(10);
         queue.enqueue(20);
@@ -98,5 +103,11 @@ public class QueueTest {
         assertEquals(2, queue.size());
         queue.dequeue();
         assertEquals(1, queue.size());
+    }
+
+    private void testExceptionImpl(Queue<String> queue) {
+        assertThrows(IllegalStateException.class, queue::dequeue);
+        assertThrows(IllegalStateException.class, queue::peek);
+        assertThrows(IllegalStateException.class, queue::rear);
     }
 }
