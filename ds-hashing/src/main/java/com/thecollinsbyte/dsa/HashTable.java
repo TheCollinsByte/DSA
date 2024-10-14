@@ -34,7 +34,7 @@ public class HashTable<K, V> {
         int index = hash(key);
         for (Entry<K,V> entry : buckets[index]) {
             if(entry.key.equals(key)) {
-                return Optional.of(entry.value);
+                return Optional.ofNullable(entry.value);
             }
         }
         return Optional.empty();
