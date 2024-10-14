@@ -40,8 +40,10 @@ public class HashTable<K, V> {
         return Optional.empty();
     }
 
-    public V remove(K key) {
-        return null;
+    public void remove(K key) {
+        int index = hash(key);
+        buckets[index].removeIf(entry -> entry.key.equals(key));
+        size--;
     }
 
     public int size() {
