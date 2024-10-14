@@ -41,6 +41,10 @@ public class HashTableTest {
 
     @Test
     public void testRemove() {
+        hashTable.put("Key", 1);
+        assertEquals(Optional.of(1), hashTable.get("Key"));
+        hashTable.remove("Key");
+        assertEquals(Optional.empty(), hashTable.get("Key"));
     }
 
     @Test
