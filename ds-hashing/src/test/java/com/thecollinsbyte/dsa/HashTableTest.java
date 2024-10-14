@@ -32,6 +32,11 @@ public class HashTableTest {
 
     @Test
     public void testPutOverwrite() {
+        hashTable.put("Key", 1);
+        assertEquals(Optional.of(1), hashTable.get("Key"));
+
+        hashTable.put("Key", 2);
+        assertEquals(Optional.of(2), hashTable.get("Key"));
     }
 
     @Test
