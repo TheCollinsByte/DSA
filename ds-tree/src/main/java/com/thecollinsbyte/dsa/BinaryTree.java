@@ -1,15 +1,20 @@
 package com.thecollinsbyte.dsa;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
 public class BinaryTree<T> {
 
-    private Node<T> root;
+    private TreeNode<T> root;
 
-    private static class Node<T> {
+    private static class TreeNode<T> {
         T data;
-        Node<T> left;
-        Node<T> right;
+        TreeNode<T> left;
+        TreeNode<T> right;
 
-        Node(T data) {
+        TreeNode(T data) {
             this.data = data;
         }
     }
@@ -18,7 +23,7 @@ public class BinaryTree<T> {
         return height(root);
     }
 
-    private int height(Node<T> node) {
+    private int height(TreeNode<T> node) {
         if(node == null) return -1;
         return 1 + Math.max(height(node.left), height(node.right));
     }
@@ -27,21 +32,77 @@ public class BinaryTree<T> {
         return search(root, value);
     }
 
-    private boolean search(Node<T> node, T value) {
+    private boolean search(TreeNode<T> node, T value) {
         if(node == null) return false;
         if(node.data.equals(value)) return true;
         return search(node.left, value) || search(node.right, value);
     }
 
     public void insert(T value) {
-        root = insert(root, value);
+        if(root == null) {
+            root = new TreeNode<>(value);
+            return;
+        }
+
+        Queue<TreeNode<T>> queue = new LinkedList<>();
+        queue.offer(root);
+
+        while (!queue.isEmpty()) {
+            TreeNode<T> current = queue.poll();
+
+            if(current.left == null) {
+                current.left = new TreeNode<>(value);
+                return;
+            } else if (current.right == null) {
+                current.right = new TreeNode<>(value);
+                return;
+            }
+
+            queue.offer(current.left);
+            queue.offer(current.right);
+        }
     }
 
-    private Node<T> insert(Node<T> node, T value) {
-        if (node == null) return new Node<>(value);
-        if (node.left == null) node.left = insert(node.left, value);
-        else if (node.right == null) node.right = insert(node.right, value);
-        else node.left = insert(node.left, value);
-        return node;
+    /**
+     * Recursive Pre-Order Traversal and Iterative Pre-Order Traversal Of a Binary Tree
+     */
+    public List<T> preorderTraversal() {
+        List<T> result = new ArrayList<>();
+        preorderTraversal(root, result);
+        return result;
+    }
+
+    private void preorderTraversal(TreeNode<T> node, List<T> result) {
+        if (node == null) return;
+        result.add(node.data);
+        preorderTraversal(node.left, result);
+        preorderTraversal(node.right, result);
+    }
+
+    // Tree Traversals
+    public List<T> inorderTraversal() {
+        List<T> result = new ArrayList<>();
+        inorderTraversal(root, result);
+        return result;
+    }
+
+    private void inorderTraversal(TreeNode<T> node, List<T> result) {
+        if (node == null) return;
+        inorderTraversal(node.left, result);
+        result.add(node.data);
+        inorderTraversal(node.right, result);
+    }
+
+    public List<T> postorderTraversal() {
+        List<T> result = new ArrayList<>();
+        postorderTraversal(root, result);
+        return result;
+    }
+
+    private void postorderTraversal(TreeNode<T> node, List<T> result) {
+        if(node == null) return;
+        postorderTraversal(node.left, result);
+        postorderTraversal(node.right, result);
+        result.add(node.data);
     }
 }
