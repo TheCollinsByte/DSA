@@ -1,9 +1,17 @@
 package com.thecollinsbyte.dsa.recursion.basics;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BasicRecursionProblems {
 
-    public String decimalToBinary(int number) {
+    private List<Integer> result = new ArrayList<>();
 
-        return "";
+    public List<Integer> getNumbersUpToN(int number) {
+        if(number > 0) {
+            getNumbersUpToN(number - 1);
+            result.add(number);
+        }
+        return result;
     }
 }
