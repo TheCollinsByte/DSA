@@ -23,4 +23,10 @@ public class BasicRecursionProblemsTest {
         assertEquals(List.of(1, 2, 3, 4, 5), result);
     }
 
+    @Test
+    public void testGetNumbersDownToOne() {
+        List<Integer> result = recursion.getNumbersDownToOne(5);
+        assertEquals(5, result.size());
+        assertEquals(List.of(5, 4, 3, 2, 1), result);
+    }
 }
