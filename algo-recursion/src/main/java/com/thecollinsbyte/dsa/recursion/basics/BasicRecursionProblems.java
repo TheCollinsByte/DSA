@@ -23,4 +23,11 @@ public class BasicRecursionProblems {
         }
         return result;
     }
+
+    public float findMean(int values[], int length) {
+        if (length == 1)
+            return (float) values[length - 1];
+        else
+            return ((float) (findMean(values, length - 1) * (length - 1) + values[length - 1]) / length );
+    }
 }

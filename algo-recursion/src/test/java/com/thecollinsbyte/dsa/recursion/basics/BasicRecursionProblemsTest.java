@@ -29,4 +29,12 @@ public class BasicRecursionProblemsTest {
         assertEquals(5, result.size());
         assertEquals(List.of(5, 4, 3, 2, 1), result);
     }
+
+    @Test
+    public void testFindMean() {
+        int[] values = new int[]{1, 2, 3, 4, 5};
+        float result = recursion.findMean(values, values.length);
+
+        assertEquals(3, result);
+    }
 }
